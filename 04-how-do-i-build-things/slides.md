@@ -7,7 +7,8 @@ paginate: true
 <!--
    CPU · Lesson 0 · Session 04 — How do I build things?
    VS Code + Terminal + Git/GitHub for CS freshmen.
-   Order: the need -> terminal (history first) -> VS Code -> Git/GitHub -> Markdown.
+   Order: the need -> terminal -> VS Code -> Git/GitHub -> Markdown.
+   Every tool section opens with a scene page (quote + keyword beats) before teaching.
    Slides carry keywords only; the HTML comment on each page is the talk track.
 -->
 
@@ -33,12 +34,11 @@ Lesson 0 · Session 04 — CPU Tech Group
 
 ## The plan for today
 
-1. The need *week one, in five scenes*
-2. Terminal *the fifty-year-old interface*
-3. VS Code *where you write code*
-4. Git & GitHub *keep and share*
-5. Markdown & the toolchain *how it fits together*
-6. Homework *before next week*
+1. The need - *week one, in five scenes*
+2. Terminal - *the fifty-year-old interface*
+3. VS Code - *where you write code*
+4. Git & GitHub - *keep and share*
+5. Markdown & the toolchain - *how it fits together*
 
 ---
 
@@ -49,7 +49,7 @@ Lesson 0 · Session 04 — CPU Tech Group
 
 ### 01
 
-#### What week one asks of you
+#### Here comes some TODOs
 
 Lesson 0 · The toolchain — CPU Tech Group
 
@@ -94,6 +94,25 @@ Lesson 0 · The toolchain — CPU Tech Group
 #### Where it all began
 
 Lesson 0 · The toolchain — CPU Tech Group
+
+---
+
+<!-- Regular content: the scene that motivates the terminal.
+     讲稿：周五要交的作业，spec 里一行小字：代码必须能在实验室服务器上跑。
+     你登上去——没有桌面、没有图标，鼠标点哪儿都没反应。
+     只有一个黑窗口和一个闪烁的光标，它在等你敲一行字。
+     讲完这页闪回 1969：这个黑窗口是从哪来的。 -->
+
+## 02 · The scene — first Friday, 21:47
+
+> **"your code must run on the lab server"** — coursework spec, week 1
+
+- **You log in** — no desktop · no icons
+- **One black window** · a blinking cursor
+- **The mouse does nothing**
+- **It waits for a line from you**
+
+*Where did this thing come from? 1969.*
 
 ---
 
@@ -230,6 +249,26 @@ mkdir my-first-project && cd my-first-project && code .
 #### Where the code gets written
 
 Lesson 0 · The toolchain — CPU Tech Group
+
+---
+
+<!-- Regular content: the scene that motivates a real editor.
+     讲稿：周二晚上 23:40，第一个 Python 作业。
+     记事本里写 hello.py，满屏灰色，括号配不配对全靠自己眼睛；
+     第 40 行一个拼写错误，找了半个小时；
+     有同学用 Word 写代码，引号被自动换成弯引号，Python 当场报错。
+     代码需要的不是打字机，是一个懂代码的工作台。 -->
+
+## 03 · The scene — Tuesday, 23:40
+
+> **"implement a tip calculator in Python"** — due Friday
+
+- **hello.py in Notepad** — all grey · no colours
+- **A typo at line 40** — half an hour gone
+- **Word curls your quotes** — Python explodes
+- **No help is coming**
+
+*Code needs a workshop — not a typewriter.*
 
 ---
 
@@ -479,9 +518,11 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 ---
 
-<!-- Regular content: the version-control problem, told through filenames. -->
+<!-- Regular content: the Git/GitHub scene — the filename horror everyone knows.
+     讲稿：期末论文的文件名进化史，全场都经历过；代码也是一样，
+     直到有人发明了"存档点"。这页笑点之后进 Git。 -->
 
-## 04 · A problem you already know
+## 04 · The scene — a filename horror story
 
 ```text
 essay.docx  ->  essay_v2.docx  ->  essay_final.docx  ->  essay_final_REAL.docx
@@ -713,6 +754,26 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 ---
 
+<!-- Regular content: the scene that motivates Markdown.
+     讲稿：凌晨一点，你随手点开 GitHub 上一个陌生的仓库。
+     迎接你的是一个文件：README.md。
+     明明是纯文本，却有标题、列表、代码块、链接——
+     没用 Word，没有工具栏，只有字符在排版。
+     这门"用字符排版"的语言就是 Markdown。 -->
+
+## 05 · The scene — a repo at 1am
+
+> **you open a stranger's repo** — curious, 1am
+
+- **One file greets you** — README.md
+- **Plain text** — yet headings · lists · code · links
+- **No Word** · no toolbar · no formatting painter
+- **Just characters, doing layout**
+
+*That language is Markdown — next.*
+
+---
+
 <!-- Regular content: Markdown source next to its rendered look. -->
 
 ## 05 · Markdown — write once, read anywhere
@@ -910,30 +971,6 @@ Lesson 0 · The toolchain — CPU Tech Group
 </div>
 
 *One job each — together, a workshop.*
-
----
-
-<!-- _class: todo -->
-<!-- Homework: three tag blocks, spread automatically. -->
-
-## This week's homework
-
-### INSTALL
-
-- VS Code + the Python extension
-- GitHub Desktop + a GitHub account
-
-### CREATE
-
-- a folder with `hello.py` and `README.md`
-- run it: `python hello.py`
-
-### PUSH
-
-- repository in GitHub Desktop → commit → push
-- link in the group chat
-
-*Bring a laptop next session.*
 
 ---
 
