@@ -117,19 +117,23 @@ Lesson 0 · The toolchain — CPU Tech Group
 ---
 
 <!-- _class: activities -->
-<!-- 讲稿（历史故事）：
+<!-- 讲稿（时间线 1/4 · 1969–1978）：
      1969 年，贝尔实验室。计算机是一整间屋子的 PDP 系列，贵到一整栋楼共用一台。
      工程师排队用一台像打字机的东西跟它说话——电传打字机 teletype（ASR-33）：
      你敲一行，机器在纸上敲一行回给你。Unix 就是在这样的机器上写出来的，
      所以 Unix 的一切从出生起就是"命令"。
-     1978 年，DEC 的 VT100 把纸换成了屏幕——玻璃终端，"黑窗口"的原型。
-     你 Mac 里的 Terminal.app，就是在软件里模拟这台屏幕。
-     真正读你每一行字的程序叫 shell（1977 年 Bourne shell 起家，今天 zsh / bash / PowerShell）。
-     1984 年 Macintosh 把图形界面带进千家万户，点鼠标赢了大众——
-     但机房没有屏幕、凌晨三点的脚本不需要鼠标、SSH 连到千里外的服务器只有文字。
-     五十年后，你在自己笔记本上敲的 ls，和 1969 年工程师敲的是同一个词。 -->
+     1977/78 年：Bourne shell（真正读你每一行字的程序）登场；
+     DEC 的 VT100 把纸换成了屏幕——玻璃终端，"黑窗口"的原形，
+     你 Mac 里的 Terminal.app 就是在软件里模拟这台屏幕。 -->
 
-## 02 · Fifty years, one window
+## 02 · Fifty years, one window — 1969–1978
+
+<style scoped>
+section.activities { font-size: 24px; }
+section.activities h3 { font-size: 30px !important; margin: 26px 0 10px !important; }
+section.activities ul li { font-size: 24px; margin: 13px 0 !important; }
+section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
+</style>
 
 ### 1969 · THE TELETYPE
 
@@ -140,18 +144,92 @@ Lesson 0 · The toolchain — CPU Tech Group
 ### 1978 · THE GLASS TERMINAL
 
 - **VT100** — paper becomes a screen
-- **Shell** — the program reading your lines
+- **Shell** — 1977 · the program reading your lines
 - **Terminal.app** — this screen, emulated
+
+---
+
+<!-- _class: activities -->
+<!-- 讲稿（时间线 2/4 · 1981–1984）：
+     1981 年另一条支线汇进来：IBM PC 出厂直接进 DOS 的 C:\> 提示符，
+     没有桌面没有图标，开机就是命令行（COMMAND.COM 就是那时的 shell）。
+     1984 年 Macintosh 把图形界面带进千家万户，点鼠标赢了大众。 -->
+
+## 02 · Fifty years, one window — 1981–1984
+
+<style scoped>
+section.activities { font-size: 24px; }
+section.activities h3 { font-size: 30px !important; margin: 26px 0 10px !important; }
+section.activities ul li { font-size: 24px; margin: 13px 0 !important; }
+section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
+</style>
+
+### 1981 · THE PC JOINS IN
+
+- **IBM PC + MS-DOS** — boots straight to `C:\>`
+- **COMMAND.COM** — the DOS shell
 
 ### 1984 · GUI ARRIVES
 
 - **Macintosh** — windows · icons · mouse
 - **Point-and-click wins the home**
 
+---
+
+<!-- _class: activities -->
+<!-- 讲稿（时间线 3/4 · 1985–2006）：
+     1985 年微软回应：Windows 1.0 只是在 DOS 外面套了一层图形壳——
+     黑窗口从没消失，只是藏到了界面底下，今天 Win+R 输入 cmd 就能叫出它
+     （cmd.exe 就是当年 COMMAND.COM 的后代）。
+     2006 年 PowerShell：不再只会处理文本，还能处理对象，运维工程师的挚爱。 -->
+
+## 02 · Fifty years, one window — 1985–2006
+
+<style scoped>
+section.activities { font-size: 24px; }
+section.activities h3 { font-size: 30px !important; margin: 26px 0 10px !important; }
+section.activities ul li { font-size: 24px; margin: 13px 0 !important; }
+section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
+</style>
+
+### 1985 · WINDOWS ON TOP
+
+- **Windows 1.0** — a GUI riding on DOS
+- **The prompt never left** — one `cmd` away
+
+### 2006 · POWERSHELL
+
+- **Objects, not just text**
+- **Scriptable everything** — the admin's favourite
+
+---
+
+<!-- _class: activities -->
+<!-- 讲稿（时间线 4/4 · 2016–今天，收尾）：
+     2016 年 WSL——Windows 里跑真正的 Ubuntu 和 bash；
+     2019 年 Windows Terminal 带来标签页和主题。
+     但注意：图形界面赢了大众，机房依然没有屏幕、凌晨三点的脚本不需要鼠标、
+     SSH 连到千里外的服务器只有文字。
+     所以无论 Mac 还是 Windows，你今天敲的 ls，和 1969 年工程师敲的是同一个词。 -->
+
+## 02 · Fifty years, one window — 2016–today
+
+<style scoped>
+section.activities { font-size: 24px; }
+section.activities h3 { font-size: 30px !important; margin: 26px 0 10px !important; }
+section.activities ul li { font-size: 24px; margin: 13px 0 !important; }
+section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
+</style>
+
+### 2016–19 · MODERN WINDOWS SHELL
+
+- **WSL** — virtual Ubuntu · real `bash` inside Windows
+- **Windows Terminal** — tabs · themes
+
 ### TODAY
 
 - **Never left** — servers · scripts · supercomputers
-- **Your laptop ships one** — VS Code too
+- **Your laptop ships them** — Terminal / PowerShell app · VS Code too
 
 ---
 
