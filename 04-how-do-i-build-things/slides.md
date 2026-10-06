@@ -61,13 +61,15 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 ## 01 · Week one, in five scenes
 
+<br/>
+
 <style scoped>
-section { font-size: 33px; }
+section { font-size: 45px; }
 section ul li { margin: 16px 0 !important; }
 section ul ul li { margin: 10px 0 !important; }
-section ul ul li::before {
-  width: 13px !important;
-  height: 13px !important;
+section ul li::before {
+  width: 15px !important;
+  height: 15px !important;
   background: var(--yellow) !important;
 }
 </style>
@@ -101,14 +103,36 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 ## 02 · The scene — first Friday, 21:47
 
+<style scoped>
+section {
+  padding-right: 676px;
+}
+.side-shot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 640px;
+  height: 720px;
+}
+.side-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+</style>
+
 > **"your code must run on the lab server"** — coursework spec, week 1
 
 - **You log in** — no desktop · no icons
-- **One black window** · a blinking cursor
-- **The mouse does nothing**
+- **One black window** · **The mouse does nothing** · a blinking cursor
 - **It waits for a line from you**
 
 *Where did this thing come from? 1969.*
+
+<div class="side-shot">
+  <img src="assets/terminal.png" alt="A terminal waiting for a command">
+</div>
 
 ---
 
@@ -125,11 +149,32 @@ Lesson 0 · The toolchain — CPU Tech Group
 ## 02 · Fifty years, one window — 1969–1978
 
 <style scoped>
-section.activities { font-size: 30px; }
-section.activities h3 { font-size: 34px !important; margin: 20px 0 8px !important; }
-section.activities ul li { font-size: 30px; margin: 9px 0 !important; }
+section.activities {
+  font-size: 30px;
+  padding-right: 450px;
+}
+section.activities h2 { font-size: 36px !important; }
+section.activities h3 { font-size: 34px !important; margin: 14px 0 6px !important; }
+section.activities ul li { font-size: 30px; margin: 4px 0 !important; }
 section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
+.teletype-shot {
+  position: absolute;
+  top: -350px;
+  right: -500px;
+  width: 920px;
+  height: 1440px;
+}
+.teletype-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 </style>
+
+<div class="teletype-shot">
+  <img src="assets/WACsOperateTeletype.jpg" alt="WACs operating teletypes">
+</div>
 
 ### 1969 · THE TELETYPE
 
@@ -155,9 +200,24 @@ section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
 
 <style scoped>
 section.activities { font-size: 30px; }
-section.activities h3 { font-size: 34px !important; margin: 20px 0 8px !important; }
-section.activities ul li { font-size: 30px; margin: 9px 0 !important; }
+section.activities h2 { font-size: 36px !important; margin-bottom: 6px !important; }
+section.activities h3 { font-size: 34px !important; margin: 10px 0 5px !important; }
+section.activities ul li { font-size: 30px; margin: 3px 0 !important; }
 section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
+.dos-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 210px;
+}
+.dos-band img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
 </style>
 
 ### 1981 · THE PC JOINS IN
@@ -169,6 +229,10 @@ section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
 
 - **Macintosh** — windows · icons · mouse
 - **Point-and-click wins the home**
+
+<div class="dos-band">
+  <img src="assets/ms-dos.png" alt="MS-DOS prompt">
+</div>
 
 ---
 
@@ -182,10 +246,27 @@ section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
 ## 02 · Fifty years, one window — 1985–2006
 
 <style scoped>
-section.activities { font-size: 30px; }
+section.activities {
+  font-size: 30px;
+  padding-right: 580px;
+}
 section.activities h3 { font-size: 34px !important; margin: 20px 0 8px !important; }
 section.activities ul li { font-size: 30px; margin: 9px 0 !important; }
 section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
+.side-shot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 538px;
+  height: 720px;
+}
+.side-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
+}
 </style>
 
 ### 1985 · WINDOWS ON TOP
@@ -197,6 +278,10 @@ section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
 
 - **Objects, not just text**
 - **Scriptable everything** — the admin's favourite
+
+<div class="side-shot">
+  <img src="assets/PowerShell.png" alt="PowerShell console">
+</div>
 
 ---
 
@@ -315,6 +400,26 @@ section {
 
 ## 02 · Look inside — ls · cd
 
+<style scoped>
+section {
+  padding-right: 676px;
+}
+.side-shot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 640px;
+  height: 720px;
+}
+.side-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
+}
+</style>
+
 - **Open a folder, look** — `ls`
 - **Double-click in** — `cd folder`
 - **Back out** — `cd ..`
@@ -322,55 +427,45 @@ section {
 
 *macOS · Linux: identical.*
 
+<div class="side-shot">
+  <img src="assets/finder.png" alt="Finder window">
+</div>
+
 ---
 
-<!-- Regular content: create. Image: real mkdir/touch session on the right.
+<!-- Regular content: create. Image: the right-click New submenu on the right.
      讲稿：右键新建文件夹，就是 mkdir；新建文本文档，就是 touch——touch 只做一件事，
-     放一个零字节的空文件。右边这张实录：mkdir hello，ls 看见它；
-     touch a.txt，再 ls，两个都在。命令行里"验证"就是再敲一次 ls。 -->
+     放一个零字节的空文件。右边就是你们天天点的菜单：New → Folder、Text Document，
+     每个菜单项底下都是一条命令。命令行里"验证"就是再敲一次 ls。 -->
 
 ## 02 · New — mkdir · touch
 
 <style scoped>
-.cmd-row {
-  display: flex;
-  gap: 36px;
-  align-items: flex-start;
-  margin-top: 8px;
+section {
+  padding-right: 676px;
 }
-.cmd-row ul {
-  flex: 1;
-  margin-top: 10px;
+.side-shot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 640px;
+  height: 720px;
 }
-.shot {
-  flex: none;
-  text-align: center;
-}
-.shot img {
-  width: 380px;
+.side-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  border: 3px solid #111111;
-}
-.shot span {
-  display: block;
-  font-size: 16px;
-  font-weight: 700;
-  color: #a3a3a3;
-  margin-top: 8px;
 }
 </style>
 
-<div class="cmd-row">
-  <ul>
-    <li><strong>New → Folder</strong> — <code>mkdir hello</code></li>
-    <li><strong>New → Text Document</strong> — <code>touch a.txt</code></li>
-    <li><strong>touch makes one thing</strong> — an empty file</li>
-    <li><strong>Check it worked</strong> — <code>ls</code> again</li>
-  </ul>
-  <div class="shot">
-    <img src="assets/mkdir-touch.png" alt="mkdir and touch session">
-    <span>a real session — mkdir · touch · ls</span>
-  </div>
+- **New → Folder** — `mkdir hello`
+- **New → Text Document** — `touch a.txt`
+- **touch makes one thing** — an empty file
+- **Check it worked** — `ls` again
+
+<div class="side-shot">
+  <img src="assets/mkdir-touch.png" alt="New submenu: Folder, Text Document">
 </div>
 
 ---
@@ -382,45 +477,31 @@ section {
 ## 02 · Copy, rename — cp · mv
 
 <style scoped>
-.cmd-row {
-  display: flex;
-  gap: 36px;
-  align-items: flex-start;
-  margin-top: 8px;
+section {
+  padding-right: 676px;
 }
-.cmd-row ul {
-  flex: 1;
-  margin-top: 10px;
+.side-shot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 640px;
+  height: 720px;
 }
-.shot {
-  flex: none;
-  text-align: center;
-}
-.shot img {
-  width: 350px;
+.side-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  border: 3px solid #111111;
-}
-.shot span {
-  display: block;
-  font-size: 16px;
-  font-weight: 700;
-  color: #a3a3a3;
-  margin-top: 8px;
 }
 </style>
 
-<div class="cmd-row">
-  <ul>
-    <li><strong>Copy &amp; Paste</strong> — <code>cp a.txt b.txt</code></li>
-    <li><strong>Rename</strong> — <code>mv b.txt c.txt</code></li>
-    <li><strong>Same command moves</strong> — <code>mv c.txt archive/</code></li>
-    <li><strong>New name = rename · path = move</strong></li>
-  </ul>
-  <div class="shot">
-    <img src="assets/ls-cp-mv-rm.png" alt="ls cp mv rm session">
-    <span>a real session — cp makes a copy, mv renames it</span>
-  </div>
+- **Copy & Paste** — `cp a.txt b.txt`
+- **Rename** — `mv b.txt c.txt`
+- **Same command moves** — `mv c.txt archive/`
+- **New name = rename · path = move**
+
+<div class="side-shot">
+  <img src="assets/ls-cp-mv-rm.png" alt="ls cp mv rm session">
 </div>
 
 ---
@@ -431,12 +512,35 @@ section {
 
 ## 02 · Delete — rm
 
+<style scoped>
+section {
+  padding-right: 676px;
+}
+.side-shot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 640px;
+  height: 720px;
+}
+.side-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+</style>
+
 - **Delete** — `rm c.txt` — gone
 - **No Recycle Bin** — no undo, no second chance
 - **Whole folders** — `rm -r project`
 - **Last line of the picture** — `ls` again: c.txt is gone
 
 *The one command to respect: `ls` before `rm`.*
+
+<div class="side-shot">
+  <img src="assets/ls-cp-mv-rm.png" alt="ls cp mv rm session">
+</div>
 
 ---
 
@@ -464,6 +568,8 @@ mkdir my-first-project && cd my-first-project && code .
 - **SSH** — lab servers · cloud VMs · no GUI
 - **Automation** — 3am, nobody clicking
 
+<!-- ### Linux workshop: 10.11 (this Sunday) 14:00-17:00 @ IAMET 406 -->
+
 ---
 
 <!-- _class: yellow -->
@@ -488,7 +594,27 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 ## 03 · The scene — Tuesday, 23:40
 
-> **"implement a tip calculator in Python"** — due Friday
+<style scoped>
+section {
+  padding-right: 476px;
+}
+.side-shot {
+  position: absolute;
+  top: 0;
+  right: -200px;
+  width: 640px;
+  height: 720px;
+}
+.side-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+</style>
+
+> **"implement a tip calculator in Python"**
 
 - **hello.py in Notepad** — all grey · no colours
 - **A typo at line 40** — half an hour gone
@@ -497,25 +623,29 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 *Code needs a workshop — not a typewriter.*
 
+<div class="side-shot">
+  <img src="assets/word-coding.jpeg" alt="Writing code in Word">
+</div>
+
 ---
 
 <!-- Regular content: what VS Code is. Icon bottom-right. -->
 
 ## 03 · Your workshop for four years
 
-- **Not Word** — code needs a code editor
-- **Free · everywhere · huge** — the world's default
-- **Bare on purpose** — brains arrive as extensions
-- **Today** — install → window → Python → done
+- **Free · everywhere · lightweight** *(itself)*
+   - the world's default
+- **Bare on purpose**
+   - plugins / capabilities arrive as extensions
 
 <style scoped>
 section {
-  padding-right: 676px;
+  padding-right: 476px;
 }
 .side-shot {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -150px;
   width: 640px;
   height: 720px;
 }
@@ -536,7 +666,7 @@ section {
 <!-- Regular content: real VS Code screenshot with numbered overlays and a legend.
      Panel is deliberately legend-only — it is hidden until Ctrl+`. -->
 
-## 03 · One window, five areas
+## 03 · One window, multiple areas
 
 <style scoped>
 .shot-row {
@@ -558,14 +688,14 @@ section {
 .chip {
   position: absolute;
   transform: translate(-50%, -50%);
-  width: 38px;
-  height: 38px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: #f7d447;
   border: 3px solid #111111;
   color: #111111;
   font-weight: 900;
-  font-size: 19px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -591,13 +721,13 @@ section {
 }
 .lrow .num {
   flex: none;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #f7d447;
   border: 2.5px solid #111111;
   font-weight: 900;
-  font-size: 15px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -605,7 +735,7 @@ section {
 }
 .lrow strong {
   display: block;
-  font-size: 20px;
+  font-size: 30px;
 }
 .lrow span {
   display: block;
@@ -627,11 +757,8 @@ section {
     <div class="lrow"><div class="num">2</div><div><strong>Explorer</strong><span>your project's files</span></div></div>
     <div class="lrow"><div class="num">3</div><div><strong>Editor</strong><span>tabs · code · minimap</span></div></div>
     <div class="lrow"><div class="num">4</div><div><strong>Status Bar</strong><span>branch · Ln/Col · language</span></div></div>
-    <div class="lrow"><div class="num">5</div><div><strong>Panel</strong><span>terminal — Ctrl+` to open</span></div></div>
   </div>
 </div>
-
-*Same five areas — first day to final project.*
 
 ---
 
@@ -639,11 +766,11 @@ section {
 
 ## 03 · Teaching the editor your language
 
-- **Out of the box** — colour only
 - **Step 1 — add the language** — Python extension
-- **Step 2 — pick the interpreter** — the status-bar picker
+- **Step 2 — pick the interpreter/compiler** — the status-bar picker
 - **Step 3 — Run** — output in the panel below
 - **Same pattern forever** — C/C++ · Java · Rust
+![w:1050](image/slides/1791302677119.png)
 
 ---
 
@@ -653,11 +780,11 @@ section {
 
 | Extension | Why |
 | --- | --- |
-| **Python** — Microsoft | run · debug · autocomplete |
-| **C/C++** — Microsoft | the spring C courses |
+| **Pylance** | intelligent Python language support |
+| **Remote - SSH** | connect to remote servers |
 | **Prettier** | one format for the team |
-| **GitLens** | who changed this line |
-| **Chinese (Simplified) Language Pack** | menus in Chinese |
+| **Error Lens** | see errors in your code |
+| **Live Share** | collaborate in real-time |
 
 *Ctrl+Shift+X · all free · can't say why? Uninstall.*
 
@@ -673,20 +800,21 @@ section {
 
 *Twice with the mouse this week? It has a shortcut.*
 
+![w:1100](assets/vsc-auto-save.png)
+
 ---
 
 <!-- Regular content (extension): other editors exist; depth beats switching. -->
 
-## 03 · Beyond VS Code
+## 03 · Beyond VSCode
 
 - **JetBrains** — PyCharm · IntelliJ · CLion — student licences
-- **Vim** — on every server you'll ever meet
+- **Vim** — master in terminal
 - **Cursor** — AI-first · VS Code base
-- **Pick one — go deep**
 
 <style scoped>
 section {
-  padding-right: 676px;
+  padding-right: 606px;
 }
 .side-shot {
   position: absolute;
@@ -710,19 +838,6 @@ section {
 ---
 
 <!-- _class: yellow -->
-<!-- Live demo A: VS Code. -->
-
-## LIVE DEMO
-
-### A
-
-#### A folder, a file, and a run
-
-VS Code — open a folder, write hello.py, run it, meet the built-in terminal
-
----
-
-<!-- _class: yellow -->
 <!-- Section divider. -->
 
 ## GIT & GITHUB
@@ -742,7 +857,7 @@ Lesson 0 · The toolchain — CPU Tech Group
 ## 04 · The scene — a filename horror story
 
 ```text
-essay.docx  ->  essay_v2.docx  ->  essay_final.docx  ->  essay_final_REAL.docx
+essay.docx -> essay_v2.docx -> essay_final.docx -> essay_final_REAL.docx
 ```
 
 - **Git** — save points for a folder
