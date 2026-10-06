@@ -55,8 +55,8 @@ section::before {
 section::after {
   content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
   position: absolute;
-  right: 32px;
-  bottom: 14px;
+  /* right: 102px; */
+  /* bottom: 8px; */
   font-family: var(--mono);
   font-size: 15px;
   font-weight: 700;
