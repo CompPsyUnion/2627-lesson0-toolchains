@@ -38,7 +38,7 @@ Lesson 0 · Session 04 — CPU Tech Group
 2. Terminal - *the fifty-year-old interface*
 3. VS Code - *where you write code*
 4. Git & GitHub - *keep and share*
-5. Markdown & the toolchain - *how it fits together*
+5. Markdown & more toolchains - *how it fits together*
 
 ---
 
@@ -55,32 +55,28 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 ---
 
-<!-- Regular content: five scenarios. Keywords only — expand each aloud. -->
+<!-- Regular content: five scenarios as a staircase. Enlarged on purpose.
+     讲稿：开学第一周的五个场景，一层层递进——写程序、跑起来、交上去、
+     组队、读别人的代码。都不是天才问题，是工具和习惯问题。 -->
 
 ## 01 · Week one, in five scenes
 
+<style scoped>
+section { font-size: 33px; }
+section ul li { margin: 16px 0 !important; }
+section ul ul li { margin: 10px 0 !important; }
+section ul ul li::before {
+  width: 13px !important;
+  height: 13px !important;
+  background: var(--yellow) !important;
+}
+</style>
+
 - **Write a program** — tip calculator · due Friday
-- **Make it run** — on the grader's machine too
-- **Hand it in** — Moodle zip · later, a Git repo
-- **Team project** — four people · one codebase
-- **Read code** — tutorials → research
-
-*Not genius — tools and habits.*
-
----
-
-<!-- Regular content: roadmap table. Row order = section order. -->
-
-## 01 · Four needs, four tools
-
-| You need to | The tool | It gives you |
-| --- | --- | --- |
-| **Talk to the machine** | Terminal | run · install · automate |
-| **Edit code** | VS Code | highlighting · autocomplete · run |
-| **Keep and share** | Git + GitHub | save points · teamwork |
-| **Write documents** | Markdown | READMEs · reports |
-
-*One afternoon of setup — every week until graduation.*
+   - **Make it run** — on the grader's machine too
+      - **Hand it in** — Moodle zip · later, a Git repo
+         - **Team project** — four people · one codebase
+            - **Read code** — tutorials → research
 
 ---
 
@@ -129,10 +125,10 @@ Lesson 0 · The toolchain — CPU Tech Group
 ## 02 · Fifty years, one window — 1969–1978
 
 <style scoped>
-section.activities { font-size: 24px; }
-section.activities h3 { font-size: 30px !important; margin: 26px 0 10px !important; }
-section.activities ul li { font-size: 24px; margin: 13px 0 !important; }
-section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
+section.activities { font-size: 30px; }
+section.activities h3 { font-size: 34px !important; margin: 20px 0 8px !important; }
+section.activities ul li { font-size: 30px; margin: 9px 0 !important; }
+section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
 </style>
 
 ### 1969 · THE TELETYPE
@@ -158,10 +154,10 @@ section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
 ## 02 · Fifty years, one window — 1981–1984
 
 <style scoped>
-section.activities { font-size: 24px; }
-section.activities h3 { font-size: 30px !important; margin: 26px 0 10px !important; }
-section.activities ul li { font-size: 24px; margin: 13px 0 !important; }
-section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
+section.activities { font-size: 30px; }
+section.activities h3 { font-size: 34px !important; margin: 20px 0 8px !important; }
+section.activities ul li { font-size: 30px; margin: 9px 0 !important; }
+section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
 </style>
 
 ### 1981 · THE PC JOINS IN
@@ -186,10 +182,10 @@ section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
 ## 02 · Fifty years, one window — 1985–2006
 
 <style scoped>
-section.activities { font-size: 24px; }
-section.activities h3 { font-size: 30px !important; margin: 26px 0 10px !important; }
-section.activities ul li { font-size: 24px; margin: 13px 0 !important; }
-section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
+section.activities { font-size: 30px; }
+section.activities h3 { font-size: 34px !important; margin: 20px 0 8px !important; }
+section.activities ul li { font-size: 30px; margin: 9px 0 !important; }
+section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
 </style>
 
 ### 1985 · WINDOWS ON TOP
@@ -215,10 +211,10 @@ section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
 ## 02 · Fifty years, one window — 2016–today
 
 <style scoped>
-section.activities { font-size: 24px; }
-section.activities h3 { font-size: 30px !important; margin: 26px 0 10px !important; }
-section.activities ul li { font-size: 24px; margin: 13px 0 !important; }
-section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
+section.activities { font-size: 30px; }
+section.activities h3 { font-size: 34px !important; margin: 20px 0 8px !important; }
+section.activities ul li { font-size: 30px; margin: 9px 0 !important; }
+section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
 </style>
 
 ### 2016–19 · MODERN WINDOWS SHELL
@@ -240,7 +236,7 @@ section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
 - **Terminal** — the window
 - **Shell** — the program inside · zsh · bash · PowerShell
 - **Every button is a command** underneath
-- **You own several already** — macOS · Windows · VS Code (Ctrl+`)
+- **You own several already** — macOS · Windows · VS Code (`` Ctrl + ` ``)
 - **Why type?** — chains · scripts · no screen needed
 
 <style scoped>
@@ -273,21 +269,175 @@ section.activities ul li::before { width: 15px; height: 15px; top: 0.6em; }
 
 ---
 
-<!-- Regular content: the five commands, anchored to the Windows right-click menu. -->
+<!-- Regular content: the right-click menu, reinterpreted. Keywords only.
+     讲稿：从你们最熟悉的右键菜单说起——新建、复制、重命名、删除，闭着眼都会点。
+     但每个按钮底下，跑的都是一条命令：图形界面 1984 年才来，命令 1969 年就在了。
+     菜单是命令的皮肤。接下来五页，把这份菜单翻译回命令。 -->
 
-## 02 · Five commands you already know
+## 02 · You might be familiar with these
 
-| What you'd click in Windows | What you type | It does |
-| --- | --- | --- |
-| open a folder to look inside | `ls` | list |
-| double-click in / back out | `cd folder` · `cd ..` | move |
-| right-click → New → Folder | `mkdir project` | create |
-| right-click → Rename | `mv old.txt new.txt` | rename · move |
-| right-click → Delete | `rm old.txt` | gone — no trash |
+<style scoped>
+section {
+  padding-right: 676px;
+}
+.menu-shot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 640px;
+  height: 720px;
+}
+.menu-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+</style>
 
-*macOS · Linux: identical. Copy: `cp a.txt b.txt`.*
+> **Right-click**
+> ⬇️
+> **New**
+> ⬇️
+> **Folder**
+>
+> ---
+>
+> **Copy · Cut (Move) · Delete**
 
-*`rm` skips the Recycle Bin. Folders: `rm -r project`.*
+<div class="menu-shot">
+  <img src="assets/mkdir-touch.png" alt="mkdir and touch session">
+</div>
+
+---
+
+<!-- Regular content: look around. 讲稿：双击打开文件夹看看有什么——ls；
+     双击进去、退出来——cd。两个地址记住：点 = 这里，点点 = 上一级。 -->
+
+## 02 · Look inside — ls · cd
+
+- **Open a folder, look** — `ls`
+- **Double-click in** — `cd folder`
+- **Back out** — `cd ..`
+- **`.` = here · `..` = one level up**
+
+*macOS · Linux: identical.*
+
+---
+
+<!-- Regular content: create. Image: real mkdir/touch session on the right.
+     讲稿：右键新建文件夹，就是 mkdir；新建文本文档，就是 touch——touch 只做一件事，
+     放一个零字节的空文件。右边这张实录：mkdir hello，ls 看见它；
+     touch a.txt，再 ls，两个都在。命令行里"验证"就是再敲一次 ls。 -->
+
+## 02 · New — mkdir · touch
+
+<style scoped>
+.cmd-row {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+.cmd-row ul {
+  flex: 1;
+  margin-top: 10px;
+}
+.shot {
+  flex: none;
+  text-align: center;
+}
+.shot img {
+  width: 380px;
+  display: block;
+  border: 3px solid #111111;
+}
+.shot span {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #a3a3a3;
+  margin-top: 8px;
+}
+</style>
+
+<div class="cmd-row">
+  <ul>
+    <li><strong>New → Folder</strong> — <code>mkdir hello</code></li>
+    <li><strong>New → Text Document</strong> — <code>touch a.txt</code></li>
+    <li><strong>touch makes one thing</strong> — an empty file, zero bytes</li>
+    <li><strong>Check it worked</strong> — <code>ls</code> again</li>
+  </ul>
+  <div class="shot">
+    <img src="assets/mkdir-touch.png" alt="mkdir and touch session">
+    <span>a real session — mkdir · touch · ls</span>
+  </div>
+</div>
+
+---
+
+<!-- Regular content: copy and rename. Image: the ls/cp/mv/rm session.
+     讲稿：复制粘贴就是 cp；重命名就是 mv——mv 同时也是移动：给路径就是搬走，给新名字就是改名。
+     右边实录：cp a.txt b.txt，mv b.txt c.txt。图里最后一行 rm，留给下一页。 -->
+
+## 02 · Copy, rename — cp · mv
+
+<style scoped>
+.cmd-row {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+.cmd-row ul {
+  flex: 1;
+  margin-top: 10px;
+}
+.shot {
+  flex: none;
+  text-align: center;
+}
+.shot img {
+  width: 350px;
+  display: block;
+  border: 3px solid #111111;
+}
+.shot span {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #a3a3a3;
+  margin-top: 8px;
+}
+</style>
+
+<div class="cmd-row">
+  <ul>
+    <li><strong>Copy &amp; Paste</strong> — <code>cp a.txt b.txt</code></li>
+    <li><strong>Rename</strong> — <code>mv b.txt c.txt</code></li>
+    <li><strong>Same command moves</strong> — <code>mv c.txt archive/</code></li>
+    <li><strong>New name = rename · path = move</strong></li>
+  </ul>
+  <div class="shot">
+    <img src="assets/ls-cp-mv-rm.png" alt="ls cp mv rm session">
+    <span>a real session — cp makes a copy, mv renames it</span>
+  </div>
+</div>
+
+---
+
+<!-- Regular content: delete. 讲稿：删除就是 rm。回看上一页图：最后 rm c.txt，
+     再 ls，c.txt 消失了。唯一要敬畏的命令：没有回收站，没有撤销。
+     整个文件夹 rm -r project。 freshmen 的第一课：rm 之前先 ls。 -->
+
+## 02 · Delete — rm
+
+- **Delete** — `rm c.txt` — gone
+- **No Recycle Bin** — no undo, no second chance
+- **Whole folders** — `rm -r project`
+- **Last line of the picture** — `ls` again: c.txt is gone
+
+*The one command to respect: `ls` before `rm`.*
 
 ---
 
@@ -409,7 +559,7 @@ Lesson 0 · The toolchain — CPU Tech Group
 .shot-wrap img {
   width: 100%;
   display: block;
-  border: 3px solid #111111;
+  /* border: 3px solid #111111; */
 }
 .chip {
   position: absolute;
