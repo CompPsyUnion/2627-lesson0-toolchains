@@ -1,0 +1,12 @@
+{
+  "markdown.marp.themes": ["04-how-do-i-build-things/themes/cpu.css"],
+  "cSpell.words": [
+    "marp",
+    "lrow",
+    "iconstrip",
+    "winget",
+    "autograders",
+    "markdownguide",
+    "archivo"
+  ]
+}

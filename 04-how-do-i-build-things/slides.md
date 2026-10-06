@@ -1,0 +1,963 @@
+---
+marp: true
+theme: cpu
+paginate: true
+---
+
+<!--
+   CPU · Lesson 0 · Session 04 — How do I build things?
+   VS Code + Terminal + Git/GitHub for CS freshmen.
+   Order: the need -> terminal (history first) -> VS Code -> Git/GitHub -> Markdown.
+   Slides carry keywords only; the HTML comment on each page is the talk track.
+-->
+
+<!-- _class: lead -->
+<!-- Cover: title in the yellow band, subtitle, then who and when. -->
+
+# How do I build things?
+
+## VS Code · Terminal · Git & GitHub — your first toolchain
+
+Lesson 0 · Session 04 — CPU Tech Group
+
+5 October 2026
+
+### LESSON 0
+
+#### TOOLCHAINS
+
+---
+
+<!-- _class: agenda -->
+<!-- Agenda: six stops, first row highlighted. -->
+
+## The plan for today
+
+1. The need *week one, in five scenes*
+2. Terminal *the fifty-year-old interface*
+3. VS Code *where you write code*
+4. Git & GitHub *keep and share*
+5. Markdown & the toolchain *how it fits together*
+6. Homework *before next week*
+
+---
+
+<!-- _class: yellow -->
+<!-- Section divider. -->
+
+## THE NEED
+
+### 01
+
+#### What week one asks of you
+
+Lesson 0 · The toolchain — CPU Tech Group
+
+---
+
+<!-- Regular content: five scenarios. Keywords only — expand each aloud. -->
+
+## 01 · Week one, in five scenes
+
+- **Write a program** — tip calculator · due Friday
+- **Make it run** — on the grader's machine too
+- **Hand it in** — Moodle zip · later, a Git repo
+- **Team project** — four people · one codebase
+- **Read code** — tutorials → research
+
+*Not genius — tools and habits.*
+
+---
+
+<!-- Regular content: roadmap table. Row order = section order. -->
+
+## 01 · Four needs, four tools
+
+| You need to | The tool | It gives you |
+| --- | --- | --- |
+| **Talk to the machine** | Terminal | run · install · automate |
+| **Edit code** | VS Code | highlighting · autocomplete · run |
+| **Keep and share** | Git + GitHub | save points · teamwork |
+| **Write documents** | Markdown | READMEs · reports |
+
+*One afternoon of setup — every week until graduation.*
+
+---
+
+<!-- _class: yellow -->
+<!-- Section divider. -->
+
+## TERMINAL
+
+### 02
+
+#### Where it all began
+
+Lesson 0 · The toolchain — CPU Tech Group
+
+---
+
+<!-- _class: activities -->
+<!-- 讲稿（历史故事）：
+     1969 年，贝尔实验室。计算机是一整间屋子的 PDP 系列，贵到一整栋楼共用一台。
+     工程师排队用一台像打字机的东西跟它说话——电传打字机 teletype（ASR-33）：
+     你敲一行，机器在纸上敲一行回给你。Unix 就是在这样的机器上写出来的，
+     所以 Unix 的一切从出生起就是"命令"。
+     1978 年，DEC 的 VT100 把纸换成了屏幕——玻璃终端，"黑窗口"的原型。
+     你 Mac 里的 Terminal.app，就是在软件里模拟这台屏幕。
+     真正读你每一行字的程序叫 shell（1977 年 Bourne shell 起家，今天 zsh / bash / PowerShell）。
+     1984 年 Macintosh 把图形界面带进千家万户，点鼠标赢了大众——
+     但机房没有屏幕、凌晨三点的脚本不需要鼠标、SSH 连到千里外的服务器只有文字。
+     五十年后，你在自己笔记本上敲的 ls，和 1969 年工程师敲的是同一个词。 -->
+
+## 02 · Fifty years, one window
+
+### 1969 · THE TELETYPE
+
+- **Teletype** — keyboard + paper
+- **One room-sized machine** — many users
+- **Unix is born here** — everything is a command
+
+### 1978 · THE GLASS TERMINAL
+
+- **VT100** — paper becomes a screen
+- **Shell** — the program reading your lines
+- **Terminal.app** — this screen, emulated
+
+### 1984 · GUI ARRIVES
+
+- **Macintosh** — windows · icons · mouse
+- **Point-and-click wins the home**
+
+### TODAY
+
+- **Never left** — servers · scripts · supercomputers
+- **Your laptop ships one** — VS Code too
+
+---
+
+<!-- Regular content: two definitions, then why typing survives. -->
+
+## 02 · The black window, in two words
+
+- **Terminal** — the window
+- **Shell** — the program inside · zsh · bash · PowerShell
+- **Every button is a command** underneath
+- **You own several already** — macOS · Windows · VS Code (Ctrl+`)
+- **Why type?** — chains · scripts · no screen needed
+
+<style scoped>
+.icons {
+  position: absolute;
+  right: 84px;
+  bottom: 58px;
+  width: 150px;
+  text-align: center;
+}
+.icons img {
+  width: 96px;
+  height: 96px;
+  display: block;
+  margin: 0 auto;
+}
+.icons span {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #a3a3a3;
+  margin-top: 8px;
+}
+</style>
+
+<div class="icons">
+  <img src="assets/icons/terminal.png" alt="Terminal">
+  <span>Terminal.app — since 2001, emulating 1978</span>
+</div>
+
+---
+
+<!-- Regular content: the five commands, anchored to the Windows right-click menu. -->
+
+## 02 · Five commands you already know
+
+| What you'd click in Windows | What you type | It does |
+| --- | --- | --- |
+| open a folder to look inside | `ls` | list |
+| double-click in / back out | `cd folder` · `cd ..` | move |
+| right-click → New → Folder | `mkdir project` | create |
+| right-click → Rename | `mv old.txt new.txt` | rename · move |
+| right-click → Delete | `rm old.txt` | gone — no trash |
+
+*macOS · Linux: identical. Copy: `cp a.txt b.txt`.*
+
+*`rm` skips the Recycle Bin. Folders: `rm -r project`.*
+
+---
+
+<!-- Regular content: payoff — the five commands composed into one line. -->
+
+## 02 · One line, one new project
+
+```bash
+mkdir my-first-project && cd my-first-project && code .
+```
+
+- **Folder → in → open** — zero mouse
+- **`.`** — "here"
+- **`&&`** — next runs only if the last succeeded
+- **The line grows** — `git init` · `git push` soon
+
+---
+
+<!-- Regular content (extension): where terminals will find you this year. -->
+
+## 02 · Where it will find you
+
+- **Installing** — `pip install` · `brew install` · `winget install`
+- **Autograders** — coursework runs from one
+- **SSH** — lab servers · cloud VMs · no GUI
+- **Automation** — 3am, nobody clicking
+
+---
+
+<!-- _class: yellow -->
+<!-- Section divider. -->
+
+## VS CODE
+
+### 03
+
+#### Where the code gets written
+
+Lesson 0 · The toolchain — CPU Tech Group
+
+---
+
+<!-- Regular content: what VS Code is. Icon bottom-right. -->
+
+## 03 · Your workshop for four years
+
+- **Not Word** — code needs a code editor
+- **Free · everywhere · huge** — the world's default
+- **Bare on purpose** — brains arrive as extensions
+- **Today** — install → window → Python → done
+
+<style scoped>
+.icons {
+  position: absolute;
+  right: 84px;
+  bottom: 58px;
+  width: 160px;
+  text-align: center;
+}
+.icons img {
+  width: 108px;
+  height: 108px;
+  display: block;
+  margin: 0 auto;
+}
+.icons span {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #a3a3a3;
+  margin-top: 8px;
+}
+</style>
+
+<div class="icons">
+  <img src="assets/icons/vscode.png" alt="VS Code">
+  <span>free · macOS / Windows / Linux</span>
+</div>
+
+---
+
+<!-- Regular content: real VS Code screenshot with numbered overlays and a legend.
+     Panel is deliberately legend-only — it is hidden until Ctrl+`. -->
+
+## 03 · One window, five areas
+
+<style scoped>
+.shot-row {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 6px;
+}
+.shot-wrap {
+  position: relative;
+  width: 760px;
+  flex: none;
+}
+.shot-wrap img {
+  width: 100%;
+  display: block;
+  border: 3px solid #111111;
+}
+.chip {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f7d447;
+  border: 3px solid #111111;
+  color: #111111;
+  font-weight: 900;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chip.c1 { left: 2.5%; top: 56%; }
+.chip.c2 { left: 13%; top: 38%; }
+.chip.c3 { left: 62%; top: 30%; }
+.chip.c4 { left: 47%; top: 96%; }
+.legend {
+  flex: 1;
+  height: 475px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.lrow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 15px 0;
+  font-size: 19px;
+  line-height: 1.4;
+}
+.lrow .num {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f7d447;
+  border: 2.5px solid #111111;
+  font-weight: 900;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.lrow strong {
+  display: block;
+  font-size: 20px;
+}
+.lrow span {
+  display: block;
+  color: #a3a3a3;
+  font-size: 16px;
+}
+</style>
+
+<div class="shot-row">
+  <div class="shot-wrap">
+    <img src="assets/vscode-window.png" alt="VS Code window">
+    <div class="chip c1">1</div>
+    <div class="chip c2">2</div>
+    <div class="chip c3">3</div>
+    <div class="chip c4">4</div>
+  </div>
+  <div class="legend">
+    <div class="lrow"><div class="num">1</div><div><strong>Activity Bar</strong><span>files · search · git · extensions</span></div></div>
+    <div class="lrow"><div class="num">2</div><div><strong>Explorer</strong><span>your project's files</span></div></div>
+    <div class="lrow"><div class="num">3</div><div><strong>Editor</strong><span>tabs · code · minimap</span></div></div>
+    <div class="lrow"><div class="num">4</div><div><strong>Status Bar</strong><span>branch · Ln/Col · language</span></div></div>
+    <div class="lrow"><div class="num">5</div><div><strong>Panel</strong><span>terminal — Ctrl+` to open</span></div></div>
+  </div>
+</div>
+
+*Same five areas — first day to final project.*
+
+---
+
+<!-- Regular content: language support in three steps, Python first. -->
+
+## 03 · Teaching the editor your language
+
+- **Out of the box** — colour only
+- **Step 1 — add the language** — Python extension
+- **Step 2 — pick the interpreter** — the status-bar picker
+- **Step 3 — Run** — output in the panel below
+- **Same pattern forever** — C/C++ · Java · Rust
+
+---
+
+<!-- Regular content: a short, opinionated extension list. -->
+
+## 03 · Extensions worth installing today
+
+| Extension | Why |
+| --- | --- |
+| **Python** — Microsoft | run · debug · autocomplete |
+| **C/C++** — Microsoft | the spring C courses |
+| **Prettier** | one format for the team |
+| **GitLens** | who changed this line |
+| **Chinese (Simplified) Language Pack** | menus in Chinese |
+
+*Ctrl+Shift+X · all free · can't say why? Uninstall.*
+
+---
+
+<!-- Regular content: the two shortcuts that unlock everything else. -->
+
+## 03 · Two shortcuts and one habit
+
+- **Ctrl/Cmd + Shift + P** — Command Palette — every command
+- **Ctrl/Cmd + P** — Quick Open — any file
+- **Auto Save: afterDelay** — crashes stop eating homework
+
+*Twice with the mouse this week? It has a shortcut.*
+
+---
+
+<!-- Regular content (extension): other editors exist; depth beats switching. -->
+
+## 03 · Beyond VS Code
+
+- **JetBrains** — PyCharm · IntelliJ · CLion — student licences
+- **Vim** — on every server you'll ever meet
+- **Cursor** — AI-first · VS Code base
+- **Pick one — go deep**
+
+<style scoped>
+.icons {
+  position: absolute;
+  right: 84px;
+  bottom: 58px;
+  width: 150px;
+  text-align: center;
+}
+.icons img {
+  width: 96px;
+  height: 96px;
+  display: block;
+  margin: 0 auto;
+}
+.icons span {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #a3a3a3;
+  margin-top: 8px;
+}
+</style>
+
+<div class="icons">
+  <img src="assets/icons/pycharm.png" alt="PyCharm">
+  <span>PyCharm — the Python one</span>
+</div>
+
+---
+
+<!-- _class: yellow -->
+<!-- Live demo A: VS Code. -->
+
+## LIVE DEMO
+
+### A
+
+#### A folder, a file, and a run
+
+VS Code — open a folder, write hello.py, run it, meet the built-in terminal
+
+---
+
+<!-- _class: yellow -->
+<!-- Section divider. -->
+
+## GIT & GITHUB
+
+### 04
+
+#### Keep everything, share everything
+
+Lesson 0 · The toolchain — CPU Tech Group
+
+---
+
+<!-- Regular content: the version-control problem, told through filenames. -->
+
+## 04 · A problem you already know
+
+```text
+essay.docx  ->  essay_v2.docx  ->  essay_final.docx  ->  essay_final_REAL.docx
+```
+
+- **Git** — save points for a folder
+- **GitHub** — the cloud home for Git folders
+- **Three names** — Git the tool · GitHub the site · Desktop the driver
+- **Coming for you** — team coursework · internships · research
+
+---
+
+<!-- Regular content: the mental model as a diagram. -->
+
+## 04 · The loop, in one picture
+
+<style scoped>
+.loop {
+  display: flex;
+  align-items: stretch;
+  gap: 26px;
+  margin-top: 30px;
+}
+.zone {
+  border: 2.5px dashed #c9b96c;
+  padding: 18px 16px 20px;
+}
+.zone-tag {
+  display: inline-block;
+  background: #f7d447;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  padding: 2px 10px;
+  margin-bottom: 12px;
+}
+.zone.laptop {
+  flex: 1.6;
+}
+.zone.cloud {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.zone.cloud .box {
+  flex: 1;
+}
+.pair {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.box {
+  background: #ffffff;
+  border: 3px solid #111111;
+  padding: 10px 14px;
+  flex: 1;
+}
+.box strong {
+  display: block;
+  font-size: 21px;
+  font-weight: 900;
+}
+.box span {
+  display: block;
+  color: #a3a3a3;
+  font-size: 16px;
+  margin-top: 2px;
+}
+.arrow {
+  flex: none;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.link-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+</style>
+
+<div class="loop">
+  <div class="zone laptop">
+    <div class="zone-tag">YOUR LAPTOP</div>
+    <div class="pair">
+      <div class="box"><strong>Working folder</strong><span>hello.py — where you edit</span></div>
+      <div class="arrow">commit →</div>
+      <div class="box"><strong>Local history</strong><span>save points kept by Git</span></div>
+    </div>
+  </div>
+  <div class="link-col">
+    <div class="arrow">push →</div>
+    <div class="arrow">← pull</div>
+  </div>
+  <div class="zone cloud">
+    <div class="zone-tag">GITHUB — CLOUD COPY</div>
+    <div class="box"><strong>Remote repository</strong><span>backup · teammates · the world</span></div>
+  </div>
+</div>
+
+- **commit** — labelled save point, on your laptop
+- **push** — upload your save points
+- **pull** — download everyone else's
+
+*edit · commit · push · pull — 90% of Git.*
+
+---
+
+<!-- Regular content: GitHub Desktop walkthrough, button by button. -->
+
+## 04 · GitHub Desktop — the loop, no typing
+
+1. **Clone** — File → Clone repository
+2. **Edit in VS Code** — Desktop lists every change
+3. **Commit** — tick files · honest message · "Commit to main"
+4. **Push origin / Pull origin** — yours up · theirs down
+
+*Hover any button — Desktop shows the git command underneath.*
+
+<style scoped>
+.iconstrip {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 22px;
+  margin-top: 26px;
+}
+.iconstrip .step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.iconstrip img {
+  width: 64px;
+  height: 64px;
+}
+.iconstrip span {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.iconstrip span em {
+  display: block;
+  font-style: normal;
+  color: #a3a3a3;
+  font-size: 14px;
+  font-weight: 500;
+}
+.iconstrip .join {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-weight: 700;
+  font-size: 22px;
+  color: #a3a3a3;
+}
+</style>
+
+<div class="iconstrip">
+  <div class="step">
+    <img src="assets/icons/vscode.png" alt="VS Code">
+    <span>write<em>your laptop</em></span>
+  </div>
+  <div class="join">→</div>
+  <div class="step">
+    <img src="assets/icons/github-desktop.png" alt="GitHub Desktop">
+    <span>commit · push<em>GitHub Desktop</em></span>
+  </div>
+  <div class="join">→</div>
+  <div class="step">
+    <img src="assets/icons/chrome.png" alt="Browser">
+    <span>see it online<em>github.com</em></span>
+  </div>
+</div>
+
+---
+
+<!-- Regular content (extension): branches as parallel timelines. -->
+
+## 04 · Branches — parallel timelines
+
+- **Branch** — a parallel timeline
+- **main stays runnable**
+- **Try → merge or delete**
+- **Teams** — own branch each · merge by pull request
+- **In Desktop** — one dropdown: new · switch · merge · publish
+
+*Not week one. Week ten — file this page.*
+
+---
+
+<!-- Regular content (extension): GitHub beyond being a backup. -->
+
+## 04 · More than a backup
+
+- **Public workshop** — a profile beats a CV line
+- **Open source** — issues · pull requests · reviews
+- **Coursework & research** — team repos · reproducible code
+- **Every repo opens on its README** — next section
+
+---
+
+<!-- _class: yellow -->
+<!-- Live demo B: GitHub Desktop round trip. -->
+
+## LIVE DEMO
+
+### B
+
+#### Edit to GitHub in four clicks
+
+GitHub Desktop — clone, change, commit, push, then refresh the page and watch it land
+
+---
+
+<!-- _class: yellow -->
+<!-- Section divider. -->
+
+## TOOLCHAIN
+
+### 05
+
+#### Markdown, and how it all fits
+
+Lesson 0 · The toolchain — CPU Tech Group
+
+---
+
+<!-- Regular content: Markdown source next to its rendered look. -->
+
+## 05 · Markdown — write once, read anywhere
+
+<style scoped>
+.md-cols {
+  display: flex;
+  gap: 26px;
+  margin-top: 10px;
+}
+.md-col {
+  flex: 1;
+}
+.md-col .tag {
+  display: inline-block;
+  background: #f7d447;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  padding: 2px 10px;
+  margin-bottom: 10px;
+}
+.md-col pre {
+  margin: 0;
+  background: #f6f1de;
+  border: 2.5px solid #111111;
+  padding: 14px 18px;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 17px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.rendered {
+  background: #ffffff;
+  border: 2.5px solid #111111;
+  padding: 12px 18px 10px;
+  min-height: 176px;
+}
+.rendered .h1 {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.rendered .h2 {
+  font-weight: 900;
+  font-size: 21px;
+  margin-top: 6px;
+}
+.rendered ul {
+  margin: 6px 0;
+}
+.rendered li {
+  margin: 4px 0;
+  font-size: 19px;
+}
+.rendered .lnk {
+  color: #7a7a7a;
+  text-decoration: underline;
+  font-size: 18px;
+}
+</style>
+
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre># My project
+## Setup
+- install **Python 3.12**
+- run `python hello.py`
+- see [the docs](https://...)</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <div class="h1">My project</div>
+      <div class="h2">Setup</div>
+      <ul>
+        <li>install <strong>Python 3.12</strong></li>
+        <li>run <code>python hello.py</code></li>
+        <li>see <span class="lnk">the docs</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+- **Plain text, lightly formatted** — readable raw · pretty rendered
+- **Everywhere** — GitHub · Jupyter · notes apps
+- **This deck** — Markdown, rendered by Marp
+
+---
+
+<!-- Regular content: the toolchain map — four tool cards plus what comes later. -->
+
+## 05 · The toolchain so far
+
+<style scoped>
+.chain {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  margin-top: 16px;
+}
+.card {
+  flex: 1;
+  border: 3px solid #111111;
+  padding: 16px 14px 12px;
+  text-align: center;
+  background: #ffffff;
+}
+.card img {
+  width: 66px;
+  height: 66px;
+  display: block;
+  margin: 0 auto 8px;
+}
+.card .glyph {
+  font-family: 'Archivo Black', 'Arial Black', sans-serif;
+  font-size: 52px;
+  line-height: 66px;
+  height: 66px;
+  margin-bottom: 8px;
+  color: #111111;
+}
+.card .verb {
+  background: #f7d447;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  padding: 1px 10px;
+}
+.card .name {
+  font-weight: 900;
+  font-size: 21px;
+  margin-top: 8px;
+}
+.card .what {
+  color: #a3a3a3;
+  font-size: 15.5px;
+  line-height: 1.35;
+  margin-top: 4px;
+}
+.later {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 22px;
+  border: 2.5px dashed #c9b96c;
+  padding: 8px 18px;
+}
+.later img {
+  width: 44px;
+  height: 44px;
+}
+.later .txt {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #7a7a7a;
+}
+</style>
+
+<div class="chain">
+  <div class="card">
+    <img src="assets/icons/terminal.png" alt="Terminal">
+    <div class="verb">RUN</div>
+    <div class="name">Terminal</div>
+    <div class="what">run · install · automate</div>
+  </div>
+  <div class="card">
+    <img src="assets/icons/vscode.png" alt="VS Code">
+    <div class="verb">WRITE</div>
+    <div class="name">VS Code</div>
+    <div class="what">code · autocomplete · extensions</div>
+  </div>
+  <div class="card">
+    <img src="assets/icons/github-desktop.png" alt="GitHub Desktop">
+    <div class="verb">VERSION</div>
+    <div class="name">Git + GitHub</div>
+    <div class="what">save points · shared in the cloud</div>
+  </div>
+  <div class="card">
+    <div class="glyph">#</div>
+    <div class="verb">DOCUMENT</div>
+    <div class="name">Markdown</div>
+    <div class="what">READMEs · reports · this deck</div>
+  </div>
+</div>
+
+<div class="later">
+  <img src="assets/icons/docker.png" alt="Docker">
+  <div class="txt">LATER THIS SERIES — SSH · DOCKER · CI · AI IN THE TERMINAL</div>
+</div>
+
+*One job each — together, a workshop.*
+
+---
+
+<!-- _class: todo -->
+<!-- Homework: three tag blocks, spread automatically. -->
+
+## This week's homework
+
+### INSTALL
+
+- VS Code + the Python extension
+- GitHub Desktop + a GitHub account
+
+### CREATE
+
+- a folder with `hello.py` and `README.md`
+- run it: `python hello.py`
+
+### PUSH
+
+- repository in GitHub Desktop → commit → push
+- link in the group chat
+
+*Bring a laptop next session.*
+
+---
+
+<!-- Regular content: where to learn more. -->
+
+## Where to learn more
+
+- **code.visualstudio.com/docs** — VS Code docs
+- **git-scm.com/book** — Pro Git · chapters 1–3
+- **desktop.github.com** — Desktop guides
+- **markdownguide.org** — the cheat sheet
+- **github.com/CompPsyUnion** — last year's notes
+
+*Stuck? Group chat · any mentor.*
+
+---
+
+<!-- _class: yellow -->
+<!-- Closing. -->
+
+## THANK YOU
+
+### 04
+
+#### How do I build things?
+
+Lesson 0 · The toolchain — CPU Tech Group · 5 October 2026
