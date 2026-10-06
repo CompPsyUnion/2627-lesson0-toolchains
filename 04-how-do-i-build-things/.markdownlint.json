@@ -4,8 +4,8 @@
   "MD024": false,
   "MD033": {
     "allowed_elements": [
-      "details", "summary", "img", "table", "tr", "td", "br", "kbd", "style",
-      "div", "span", "p", "pre", "ul", "li", "strong", "code", "em"
+      "details", "summary", "img", "table", "tr", "td", "th", "ol", "blockquote",
+      "br", "kbd", "style", "div", "span", "p", "pre", "ul", "li", "strong", "code", "em"
     ]
   }
 }

@@ -21,7 +21,7 @@ paginate: true
 
 Lesson 0 · Session 04 — CPU Tech Group
 
-5 October 2026
+7 October 2026
 
 ### LESSON 0
 
@@ -1101,36 +1101,39 @@ essay.docx -> essay_v2.docx -> essay_final.docx -> essay_final_REAL.docx
 .iconstrip {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 22px;
-  margin-top: 26px;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 44px;
 }
 .iconstrip .step {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 14px;
 }
 .iconstrip img {
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 96px;
 }
 .iconstrip span {
   display: block;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.3;
+  text-align: center;
 }
 .iconstrip span em {
   display: block;
   font-style: normal;
   color: #a3a3a3;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
+  margin-top: 4px;
 }
 .iconstrip .join {
   font-family: ui-monospace, 'SF Mono', Menlo, monospace;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 34px;
   color: #a3a3a3;
 }
 </style>
@@ -1185,26 +1188,13 @@ essay.docx -> essay_v2.docx -> essay_final.docx -> essay_final_REAL.docx
 ---
 
 <!-- _class: yellow -->
-<!-- Live demo B: GitHub Desktop round trip. -->
-
-## LIVE DEMO
-
-### B
-
-#### Edit to GitHub in four clicks
-
-GitHub Desktop — clone, change, commit, push, then refresh the page and watch it land
-
----
-
-<!-- _class: yellow -->
 <!-- Section divider. -->
 
 ## TOOLCHAIN
 
 ### 05
 
-#### Markdown, and how it all fits
+#### Markdown - how it all fits
 
 Lesson 0 · The toolchain — CPU Tech Group
 
@@ -1230,7 +1220,10 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 ---
 
-<!-- Regular content: Markdown source next to its rendered look. -->
+<!-- Regular content: Markdown overview — source next to its rendered look.
+     讲稿：Markdown 的全部哲学：写的时候是纯文本，读的时候是漂亮排版。
+     左边是你敲的，右边是读者看的。左边这些符号你都认得吗？
+     接下来六页，一个语法一页，全部过一遍。 -->
 
 ## 05 · Markdown — write once, read anywhere
 
@@ -1241,6 +1234,12 @@ Lesson 0 · The toolchain — CPU Tech Group
   margin-top: 10px;
 }
 .md-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.md-col pre,
+.rendered {
   flex: 1;
 }
 .md-col .tag {
@@ -1319,6 +1318,280 @@ Lesson 0 · The toolchain — CPU Tech Group
 - **Plain text, lightly formatted** — readable raw · pretty rendered
 - **Everywhere** — GitHub · Jupyter · notes apps
 - **This deck** — Markdown, rendered by Marp
+
+---
+
+<!-- Regular content: syntax 1 of 6 — headings.
+     讲稿：第一个语法：标题。# 的数量就是级别，一到六级——论文的章、节、小节。
+     一个文档只放一个 #（大标题）；README 里章节几乎都是 ## 和 ###。
+     两个坑：# 后面要空一格，写 #Project 不算标题；标题上一行要空行。 -->
+
+## 05 · Syntax 1 — headings
+
+<style scoped>
+.md-cols { display: flex; gap: 26px; margin-top: 14px; }
+.md-col { flex: 1; display: flex; flex-direction: column; }
+.md-col pre, .rendered { flex: 1; }
+.md-col .tag { display: inline-block; background: #f7d447; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; padding: 2px 10px; margin-bottom: 10px; }
+.md-col pre { margin: 0; background: #f6f1de; border: 2.5px solid #111111; padding: 14px 18px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 19px; line-height: 1.55; white-space: pre-wrap; }
+.rendered { background: #ffffff; border: 2.5px solid #111111; padding: 14px 18px 12px; min-height: 200px; }
+.rh1 { font-weight: 900; font-size: 34px; line-height: 1.2; }
+.rh2 { font-weight: 900; font-size: 26px; margin-top: 8px; }
+.rh3 { font-weight: 900; font-size: 21px; margin-top: 6px; }
+</style>
+
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre># Project
+## Setup
+### Step 1
+#### deeper</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <div class="rh1">Project</div>
+      <div class="rh2">Setup</div>
+      <div class="rh3">Step 1</div>
+      <div class="rh3" style="color: #a3a3a3;">…deeper, rarely used</div>
+    </div>
+  </div>
+</div>
+
+- **`#` count = level** — one to six
+- **One `#` per document** — the title, like a paper
+- **Space after `#`** — `#text` is just text
+
+---
+
+<!-- Regular content: syntax 2 of 6 — emphasis.
+     讲稿：第二个语法：强调。**两个星是粗体**，一个星是斜体，三个星都有。
+     没有加粗按钮——字符本身就是开关。写邮件签名、划重点、标警告全靠它。
+     下划线 _word_ 也行，但星号是通用写法。 -->
+
+## 05 · Syntax 2 — emphasis
+
+<style scoped>
+.md-cols { display: flex; gap: 26px; margin-top: 14px; }
+.md-col { flex: 1; display: flex; flex-direction: column; }
+.md-col pre, .rendered { flex: 1; }
+.md-col .tag { display: inline-block; background: #f7d447; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; padding: 2px 10px; margin-bottom: 10px; }
+.md-col pre { margin: 0; background: #f6f1de; border: 2.5px solid #111111; padding: 14px 18px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 19px; line-height: 1.55; white-space: pre-wrap; }
+.rendered { background: #ffffff; border: 2.5px solid #111111; padding: 16px 18px 12px; min-height: 200px; }
+.rendered .row { font-size: 26px; margin: 14px 0; }
+.rendered em { font-style: italic; color: #111111; font-size: 1em; font-weight: inherit; }
+</style>
+
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre>**important**
+*gently*
+***both at once***</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <div class="row"><strong>important</strong></div>
+      <div class="row"><em>gently</em></div>
+      <div class="row"><strong><em>both at once</em></strong></div>
+    </div>
+  </div>
+</div>
+
+- **Bold** — `**word**`
+- **Italic** — `*word*` · underscores `_` work too
+- **No bold button** — the characters are the switch
+
+---
+
+<!-- Regular content: syntax 3 of 6 — lists.
+     讲稿：第三个语法：列表。横杠是无序列表，数字加点是有序。
+     缩进三格就嵌套一层。最妙的是有序列表的编号是自动的——
+     中间插一项，后面的数字全部自己改，永远不会出现 1. 2. 4。 -->
+
+## 05 · Syntax 3 — lists
+
+<style scoped>
+.md-cols { display: flex; gap: 26px; margin-top: 14px; }
+.md-col { flex: 1; display: flex; flex-direction: column; }
+.md-col pre, .rendered { flex: 1; }
+.md-col .tag { display: inline-block; background: #f7d447; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; padding: 2px 10px; margin-bottom: 10px; }
+.md-col pre { margin: 0; background: #f6f1de; border: 2.5px solid #111111; padding: 14px 18px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 19px; line-height: 1.55; white-space: pre-wrap; }
+.rendered { background: #ffffff; border: 2.5px solid #111111; padding: 14px 18px 12px; min-height: 200px; }
+.rendered ul { margin: 8px 0; }
+.rendered li { font-size: 23px; margin: 6px 0; }
+.rendered ol { margin: 10px 0; padding-left: 2em; }
+</style>
+
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre>- apples
+   - green ones
+- pears
+   1. clone
+   2. commit</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <ul>
+        <li>apples
+          <ul><li>green ones</li></ul>
+        </li>
+        <li>pears</li>
+      </ul>
+      <ol>
+        <li>clone</li>
+        <li>commit</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+- **`-` unordered / `1.` ordered** — that's the whole difference
+- **Indent three spaces** — one nesting level
+- **Numbers renumber themselves** — insert a step, the rest follow
+
+---
+
+<!-- Regular content: syntax 4 of 6 — code.
+     讲稿：第四个语法：代码——你们最常用的一页。一对反引号包行内代码；
+     三连反引号开一块代码区，后面写语言名就有语法高亮。
+     README 里的安装命令、报错信息、配置文件全都靠它。
+     这套 PPT 本身就是 Markdown，里面嵌的代码块就是这么写的。 -->
+
+## 05 · Syntax 4 — code
+
+<style scoped>
+.md-cols { display: flex; gap: 26px; margin-top: 14px; }
+.md-col { flex: 1; display: flex; flex-direction: column; }
+.md-col pre, .rendered { flex: 1; }
+.md-col .tag { display: inline-block; background: #f7d447; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; padding: 2px 10px; margin-bottom: 10px; }
+.md-col pre { margin: 0; background: #f6f1de; border: 2.5px solid #111111; padding: 14px 18px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 19px; line-height: 1.55; white-space: pre-wrap; }
+.rendered { background: #ffffff; border: 2.5px solid #111111; padding: 14px 18px 12px; min-height: 200px; }
+.rendered .line { font-size: 22px; margin: 6px 0; }
+.codeblock { background: #161311; color: #f2ecd9; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 19px; line-height: 1.5; padding: 12px 16px; margin-top: 10px; }
+.codeblock .kw { color: #f7d447; }
+</style>
+
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre>run `pip install rich` first
+&nbsp;
+```python
+def hello():
+    print("hi")
+```</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <div class="line">run <code>pip install rich</code> first</div>
+      <div class="codeblock"><span class="kw">def</span> hello():<br/>&nbsp;&nbsp;&nbsp;&nbsp;print(<span class="kw">"hi"</span>)</div>
+    </div>
+  </div>
+</div>
+
+- **Inline** — one pair of backticks
+- **Fences** — triple backtick, open and close
+- **Name the language** — `python` · `c` · `bash` — that's where colour comes from
+
+---
+
+<!-- Regular content: syntax 5 of 6 — links and images.
+     讲稿：第五个语法：链接和图片——方括号放文字，圆括号放地址，
+     前面加个感叹号就变成图片。两者形状一模一样，就差一个 !。
+     alt 文字别偷懒：读屏软件靠它，图挂了的时候显示的也是它。 -->
+
+## 05 · Syntax 5 — links · images
+
+<style scoped>
+.md-cols { display: flex; gap: 26px; margin-top: 14px; }
+.md-col { flex: 1; display: flex; flex-direction: column; }
+.md-col pre, .rendered { flex: 1; }
+.md-col .tag { display: inline-block; background: #f7d447; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; padding: 2px 10px; margin-bottom: 10px; }
+.md-col pre { margin: 0; background: #f6f1de; border: 2.5px solid #111111; padding: 14px 18px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 19px; line-height: 1.55; white-space: pre-wrap; }
+.rendered { background: #ffffff; border: 2.5px solid #111111; padding: 14px 18px 12px; min-height: 200px; }
+.rendered .row { font-size: 23px; margin: 12px 0; }
+.lnk { color: #7a7a7a; text-decoration: underline; }
+.imgdemo { width: 190px; border: 3px solid #111111; padding: 10px; margin-top: 8px; text-align: center; }
+.imgdemo .sq { width: 64px; height: 64px; background: #f7d447; border: 3px solid #111111; margin: 0 auto; }
+.imgdemo .cap { font-size: 16px; font-weight: 700; color: #a3a3a3; margin-top: 8px; }
+</style>
+
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre>see [the docs](https://docs.python.org)
+&nbsp;
+![logo](img/logo.png)</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <div class="row">see <span class="lnk">the docs</span></div>
+      <div class="imgdemo">
+        <div class="sq"></div>
+        <div class="cap">logo.png</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+- **`[text](url)`** — a link
+- **Add `!`** — the same shape becomes an image
+- **Alt text matters** — screen readers read it · shown when the image breaks
+
+---
+
+<!-- Regular content: syntax 6 of 6 — quotes and tables.
+     讲稿：最后两个语法：引用和表格。> 引一行别人的话，GitHub 会给它画一条竖线；
+     竖线拼表格，第二行的 --- 分隔表头。表格是 GitHub 扩展（GFM），
+     现在到处都支持。到这里，任意一个 README 你都能逐行读懂了。 -->
+
+## 05 · Syntax 6 — quotes · tables
+
+<style scoped>
+.md-cols { display: flex; gap: 26px; margin-top: 14px; }
+.md-col { flex: 1; display: flex; flex-direction: column; }
+.md-col pre, .rendered { flex: 1; }
+.md-col .tag { display: inline-block; background: #f7d447; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; padding: 2px 10px; margin-bottom: 10px; }
+.md-col pre { margin: 0; background: #f6f1de; border: 2.5px solid #111111; padding: 14px 18px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 19px; line-height: 1.55; white-space: pre-wrap; }
+.rendered { background: #ffffff; border: 2.5px solid #111111; padding: 14px 18px 14px; min-height: 200px; }
+.rendered blockquote { margin: 10px 0; padding: 4px 16px; border-left: 6px solid #f7d447; color: #7a7a7a; font-size: 21px; }
+.rendered table { font-size: 20px; margin: 12px 0; }
+</style>
+
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre>&gt; Simplicity is a feature.
+&nbsp;
+| Tool  | Job   |
+| ----- | ----- |
+| VS Code | write |
+| Terminal | run |</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <blockquote>Simplicity is a feature.</blockquote>
+      <table>
+        <tr><th>Tool</th><th>Job</th></tr>
+        <tr><td>VS Code</td><td>write</td></tr>
+        <tr><td>Terminal</td><td>run</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+- **`>` quotes a line** — the bar appears for free
+- **`|` pipes build tables** — `---` marks the header row
+- **That's the kit** — you can now read any README, line by line
 
 ---
 
@@ -1435,10 +1708,9 @@ Lesson 0 · The toolchain — CPU Tech Group
 ## Where to learn more
 
 - **code.visualstudio.com/docs** — VS Code docs
-- **git-scm.com/book** — Pro Git · chapters 1–3
-- **desktop.github.com** — Desktop guides
 - **markdownguide.org** — the cheat sheet
-- **github.com/CompPsyUnion** — last year's notes
+- **github.com/CompPsyUnion** — our GitHub organization
+- **csdiy.wiki** — community resources
 
 *Stuck? Group chat · any mentor.*
 
@@ -1451,6 +1723,6 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 ### 04
 
-#### How do I build things?
+#### > Now you may BUILD
 
-Lesson 0 · The toolchain — CPU Tech Group · 5 October 2026
+Lesson 0 · The toolchain — CPU Tech Group · 7 October 2026
