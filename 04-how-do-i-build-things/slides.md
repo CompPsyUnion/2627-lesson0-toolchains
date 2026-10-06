@@ -850,9 +850,10 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 ---
 
-<!-- Regular content: the Git/GitHub scene — the filename horror everyone knows.
-     讲稿：期末论文的文件名进化史，全场都经历过；代码也是一样，
-     直到有人发明了"存档点"。这页笑点之后进 Git。 -->
+<!-- Regular content: the Git scene — pure pain, no tools named yet.
+     讲稿：期末论文的文件名进化史，全场都经历过；代码比论文更惨——每天都在改。
+     这页只讲痛，不讲任何工具。问全场：你们怎么办？收答案：
+     复制文件夹、改后缀、U盘、网盘、微信发给自己——下一页开始逐个拆穿。 -->
 
 ## 04 · The scene — a filename horror story
 
@@ -860,14 +861,128 @@ Lesson 0 · The toolchain — CPU Tech Group
 essay.docx -> essay_v2.docx -> essay_final.docx -> essay_final_REAL.docx
 ```
 
-- **Git** — save points for a folder
-- **GitHub** — the cloud home for Git folders
-- **Three names** — Git the tool · GitHub the site · Desktop the driver
-- **Coming for you** — team coursework · internships · research
+- **You edit every day** — every day it changes
+- **Copies everywhere** — USB · cloud drive · emailed to yourself
+- **3am, it breaks** — which one still worked?
+- **"final" means nothing**
+
+*There has to be a better way.*
 
 ---
 
-<!-- Regular content: the mental model as a diagram. -->
+<!-- Regular content: the needs map — one staircase, five needs, no commands.
+     讲稿：把"版本地狱"拆成五个真实需求，一层层递进：想回到昨天、想看清改了什么、
+     电脑坏了也不怕、四个人改一份代码、毕业时能拿出手。
+     接下来每个需求两页：先想笨办法为什么不行，再看那条命令怎么解决。
+     注意节奏：命令永远最后出场。 -->
+
+## 04 · One folder, five needs
+
+- **Go back** — yesterday's version, please
+   - **See what changed** — since it last worked
+      - **Survive the laptop** — dies · stolen · left in the library
+         - **Work together** — four people · one codebase
+            - **Show your work** — the world, eventually
+
+---
+
+<!-- Regular content: need one — go back. Naive attempts fail first, command NOT yet.
+     讲稿：需求一：回到昨天。笨办法：整个文件夹复制一份——这就是 essay_v2 的出生方式；
+     U盘——三个版本全过期。你真正想要的东西其实有名字：存档点。
+     游戏玩家 1990 年就有了，程序员 2005 年才等到。这页不出现任何命令。 -->
+
+## 04 · Need one — "take me back"
+
+> **"it worked yesterday"** — everyone, eventually
+
+- **Copy the folder?** — that's how essay_v2 was born
+- **USB drive?** — three versions, all stale
+- **What you actually want** — a save point · labelled · kept
+- **Games solved this in 1990**
+
+---
+
+<!-- Regular content: the first command, revealed only now.
+     讲稿：第一条命令：git commit——打一个存档点，必须写一句诚实的话（commit message），
+     比如 "works, before refactor"。git log 列出你打过的所有存档点，时间机器的目录。
+     强调：不要求背命令——GitHub Desktop 上那个蓝色大按钮，底下跑的就是它。 -->
+
+## 04 · The command — git commit
+
+- **`git commit`** — take a save point
+- **The message** — "works, before refactor" · honest, one line
+- **`git log`** — every save point you ever took
+- **Never typed by you** — Desktop's blue button, same command underneath
+
+![commit w:1115](assets/git-commit.png)
+
+---
+
+<!-- Regular content: need two — what changed. Still no commands.
+     讲稿：需求二：刚才还好好的，现在炸了——到底改了什么？
+     肉眼扫 400 行不现实；Word 用了一辈子也从没告诉过你两版之间差在哪。
+     你想要的是"只给我看不同"。 -->
+
+## 04 · Need two — "what changed?"
+
+> **"it worked five minutes ago"**
+
+- **Scroll and squint?** — 400 lines
+- **Microsoft Word** never told you — what moved between two versions
+- **You want** — just the differences
+
+---
+
+<!-- Regular content: the second pair of commands.
+     讲稿：两条查看命令：git status——哪些文件动了；git diff——具体动了哪几行，红删绿增。
+     GitHub Desktop 左侧的文件清单、右侧的行高亮，就是这两条命令的皮肤。
+     呼应终端篇的习惯：动手之前先看一眼——ls before rm，status before commit。 -->
+
+## 04 · The commands — git status · git diff
+
+- **`git status`** — which files changed in your workspace
+- **`git diff`** — which lines in each file · red gone · green new
+- **Desktop shows the same** — file list · line highlights
+- **Look before you commit** — same habit as `ls` before `rm`
+
+![git diff](assets/git-diff.png)
+
+---
+
+<!-- Regular content: need three — the folder must survive the machine.
+     讲稿：需求三：电脑会坏、会被偷、会忘在图书馆；你还有宿舍台式机和实验室机器。
+     U盘和微信传文件是"版本轮盘赌"。你要的是：这个文件夹在任何机器上都自动是最新的。
+     这页同样不出现命令，悬念留给下一页的"云端副本"。 -->
+
+## 04 · Need three — "it's on my other machine"
+
+- **The laptop dies** — or gets stolen · or stays in the library
+- **Two computers** — the dorm desktop · the lab
+- **USB / WeChat yourself** — version roulette
+- **You want** — same folder · everywhere · always current
+
+---
+
+<!-- Regular content: the answer — a cloud copy. The three names arrive only here.
+     讲稿：答案：把存档点放到云端一个永远在线的仓库里——GitHub。
+     三个名字到这页才出现：Git 是工具（在你电脑上）、GitHub 是网站（云端的家）、
+     GitHub Desktop 是方向盘（点按钮不背命令）。push 上传你的存档点，pull 拉下别人的。
+     顺带把需求五解决了：这个云端仓库本身就是你的作品集。 -->
+
+## 04 · The answer — a cloud copy
+
+- **Git** — the tool · on your laptop
+- **GitHub** — the site · your folder lives in the cloud
+- **`git push`** — upload your save points
+- **`git pull`** — bring the rest down
+- **The driver** — GitHub Desktop · buttons, not typing
+
+---
+
+<!-- Regular content: the mental model as a diagram — recap of everything just learned.
+     讲稿：把刚学的三条命令装回一张图：工作文件夹 commit 进本地历史（存档点在你电脑上），
+     push 上到 GitHub 云端副本，pull 拉下别人的。四个词就是 Git 的 90%。
+     这页是总结页，不是新知识页——大家应该已经在点头了。 -->
 
 ## 04 · The loop, in one picture
 
@@ -967,9 +1082,13 @@ essay.docx -> essay_v2.docx -> essay_final.docx -> essay_final_REAL.docx
 
 ---
 
-<!-- Regular content: GitHub Desktop walkthrough, button by button. -->
+<!-- Regular content: GitHub Desktop walkthrough, button by button.
+     讲稿：现在把方向盘交出来：克隆（clone，第一次把云端仓库拉到本地）、
+     在 VS Code 里改（Desktop 自动列出改动 = git status）、写一句诚实的话点
+     Commit to main（= git commit）、Push origin（= git push）。
+     鼠标悬停任何按钮，Desktop 会显示底下对应的那条命令——这就是我们装它的原因。 -->
 
-## 04 · GitHub Desktop — the loop, no typing
+## 04 · GitHub Desktop — the loop, no cmd typing
 
 1. **Clone** — File → Clone repository
 2. **Edit in VS Code** — Desktop lists every change
@@ -1035,7 +1154,9 @@ essay.docx -> essay_v2.docx -> essay_final.docx -> essay_final_REAL.docx
 
 ---
 
-<!-- Regular content (extension): branches as parallel timelines. -->
+<!-- Regular content (extension): need four — work together. Branches as parallel timelines.
+     讲稿：需求四：四个人一份代码。答案的下半场：分支——每个人的平行时间线，
+     main 永远保持能跑，试完了再合并（pull request）。这是第十周的事，先存档这页。 -->
 
 ## 04 · Branches — parallel timelines
 
@@ -1049,7 +1170,10 @@ essay.docx -> essay_v2.docx -> essay_final.docx -> essay_final_REAL.docx
 
 ---
 
-<!-- Regular content (extension): GitHub beyond being a backup. -->
+<!-- Regular content (extension): need five — show your work. GitHub beyond a backup.
+     讲稿：需求五：拿出手。你的 GitHub 主页就是一份活的简历：
+     开源协作（issue、pull request、code review）、课程组和科研的可复现代码。
+     每个仓库打开第一眼看到的 README——正好引出下一节 Markdown。 -->
 
 ## 04 · More than a backup
 
