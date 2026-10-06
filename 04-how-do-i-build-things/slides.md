@@ -240,31 +240,29 @@ section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
 - **Why type?** — chains · scripts · no screen needed
 
 <style scoped>
-.icons {
+section {
+  padding-right: 476px;
+}
+section ul li {
+  margin: 6px 0 !important;
+}
+.side-shot {
   position: absolute;
-  right: 84px;
-  bottom: 58px;
-  width: 150px;
-  text-align: center;
+  top: 0;
+  right: -200px;
+  width: 640px;
+  height: 720px;
 }
-.icons img {
-  width: 96px;
-  height: 96px;
+.side-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  margin: 0 auto;
-}
-.icons span {
-  display: block;
-  font-size: 15px;
-  font-weight: 700;
-  color: #a3a3a3;
-  margin-top: 8px;
 }
 </style>
 
-<div class="icons">
+<div class="side-shot">
   <img src="assets/icons/terminal.png" alt="Terminal">
-  <span>Terminal.app — since 2001, emulating 1978</span>
 </div>
 
 ---
@@ -295,6 +293,7 @@ section {
 }
 </style>
 
+> **Open Finder / File Explorer**,
 > **Right-click**
 > ⬇️
 > **New**
@@ -365,7 +364,7 @@ section {
   <ul>
     <li><strong>New → Folder</strong> — <code>mkdir hello</code></li>
     <li><strong>New → Text Document</strong> — <code>touch a.txt</code></li>
-    <li><strong>touch makes one thing</strong> — an empty file, zero bytes</li>
+    <li><strong>touch makes one thing</strong> — an empty file</li>
     <li><strong>Check it worked</strong> — <code>ls</code> again</li>
   </ul>
   <div class="shot">
@@ -510,31 +509,26 @@ Lesson 0 · The toolchain — CPU Tech Group
 - **Today** — install → window → Python → done
 
 <style scoped>
-.icons {
+section {
+  padding-right: 676px;
+}
+.side-shot {
   position: absolute;
-  right: 84px;
-  bottom: 58px;
-  width: 160px;
-  text-align: center;
+  top: 0;
+  right: 0;
+  width: 640px;
+  height: 720px;
 }
-.icons img {
-  width: 108px;
-  height: 108px;
+.side-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  margin: 0 auto;
-}
-.icons span {
-  display: block;
-  font-size: 15px;
-  font-weight: 700;
-  color: #a3a3a3;
-  margin-top: 8px;
 }
 </style>
 
-<div class="icons">
+<div class="side-shot">
   <img src="assets/icons/vscode.png" alt="VS Code">
-  <span>free · macOS / Windows / Linux</span>
 </div>
 
 ---
@@ -691,31 +685,26 @@ Lesson 0 · The toolchain — CPU Tech Group
 - **Pick one — go deep**
 
 <style scoped>
-.icons {
+section {
+  padding-right: 676px;
+}
+.side-shot {
   position: absolute;
-  right: 84px;
-  bottom: 58px;
-  width: 150px;
-  text-align: center;
+  top: 0;
+  right: 0;
+  width: 640px;
+  height: 720px;
 }
-.icons img {
-  width: 96px;
-  height: 96px;
+.side-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  margin: 0 auto;
-}
-.icons span {
-  display: block;
-  font-size: 15px;
-  font-weight: 700;
-  color: #a3a3a3;
-  margin-top: 8px;
 }
 </style>
 
-<div class="icons">
+<div class="side-shot">
   <img src="assets/icons/pycharm.png" alt="PyCharm">
-  <span>PyCharm — the Python one</span>
 </div>
 
 ---
