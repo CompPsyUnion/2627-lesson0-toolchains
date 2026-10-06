@@ -105,12 +105,12 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 <style scoped>
 section {
-  padding-right: 676px;
+  padding-right: 476px;
 }
 .side-shot {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100px;
   width: 640px;
   height: 720px;
 }
@@ -209,7 +209,7 @@ section.activities ul li::before { width: 16px; height: 16px; top: 0.6em; }
   left: 0;
   right: 0;
   bottom: 0;
-  height: 210px;
+  height: 240px;
 }
 .dos-band img {
   width: 100%;

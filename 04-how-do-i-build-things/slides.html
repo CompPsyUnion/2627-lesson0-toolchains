@@ -1,0 +1,918 @@
+<!DOCTYPE html><html lang="C"><head><title>How do I build things?</title><meta property="og:title" content="How do I build things?"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4O3J4OjVweDtyeTo1cHg7d2lkdGg6MjVweDtoZWlnaHQ6MjVweH08L3N0eWxlPjwvZGVmcz48cmVjdCB4PSIyMCIgeT0iMjAiIGNsYXNzPSJhIi8+PHJlY3QgeD0iNTUiIHk9IjIwIiBjbGFzcz0iYSIvPjxyZWN0IHg9IjIwIiB5PSI1NSIgY2xhc3M9ImEiLz48cmVjdCB4PSI1NSIgeT0iNTUiIGNsYXNzPSJhIi8+PC9zdmc+") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;interactivity:inert;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;interactivity:auto;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent{inset:0;position:absolute}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;view-transition-name:__bespoke_marp_transition_osc__;white-space:nowrap;will-change:transform;z-index:1}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>:where(*){margin-left:6px}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child){margin-left:0}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+:where(.bespoke-marp-parent){top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent){grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide){height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide).bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;interactivity:inert;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container :is(.bespoke-marp-presenter-info-page-area,.bespoke-marp-presenter-info-time,.bespoke-marp-presenter-info-timer){box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}body[data-bespoke-view=overview]{background:#161616;overflow:auto}body[data-bespoke-view=overview] [data-bespoke-marp-fragment=inactive]{visibility:visible}body[data-bespoke-view=overview] .bespoke-marp-overview-header{backdrop-filter:blur(4px);background:#222222d9;box-shadow:0 3px 10px #00000080;box-sizing:border-box;display:flex;height:48px;inset:0 0 auto;justify-content:flex-end;padding:10px;position:fixed;z-index:1}body[data-bespoke-view=overview] button.bespoke-marp-overview-close{height:28px;line-height:28px;transform:rotate(45deg);width:28px}body[data-bespoke-view=overview] .bespoke-marp-parent{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(0,240px));justify-content:space-around;padding:30px}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide{--bov-selected:#0000;--bov-focus:#161616;--bov-focus-outline:#0000;background-image:conic-gradient(#161616 0 0),conic-gradient(var(--bov-focus) 0 0),conic-gradient(var(--bov-focus-outline) 0 0),conic-gradient(var(--bov-selected) 0 0);background-position:5px 5px,3px 3px,2px 2px,0 0;background-repeat:no-repeat;background-size:calc(100% - 10px) calc(100% - 10px),calc(100% - 6px) calc(100% - 6px),calc(100% - 4px) calc(100% - 4px),100% 100%;content-visibility:visible;cursor:pointer;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));margin:-6px;padding:6px;interactivity:auto;opacity:1;outline:0;pointer-events:auto;scroll-margin-block:30px;width:100%;z-index:0}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide *,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active *{pointer-events:none;interactivity:inert}body[data-bespoke-view=overview] .bespoke-marp-parent :is(svg.bespoke-marp-slide:active,svg.bespoke-marp-slide:focus-visible,svg.bespoke-marp-slide:hover){--bov-focus-outline:#161616}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus:#999}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active{--bov-focus:#eee}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{--bov-selected:#0288d1}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent{padding-top:78px}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent svg.bespoke-marp-slide{scroll-margin-top:78px}.bespoke-marp-overview{background:#000000a6;inset:0;opacity:0;pointer-events:none;position:fixed;transition:opacity .1s ease;z-index:10}.bespoke-marp-overview iframe{background:#222;border:0;display:block;height:100%;left:0;position:absolute;top:0;width:100%}.bespoke-marp-overview[data-open="1"]{opacity:1;pointer-events:auto}}@media print{.bespoke-marp-overview,.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+SC:wght@400;500;700;900&display=swap');div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :where(:is(h1, marp-h1)){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section section:where(:is(h1, marp-h1)){--marpit-root-font-size: 2em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--yellow: #f7d447;--yellow-soft: #f9dd74;--ink: #111111;--gray: #a3a3a3;--grid: #e3d5a8;--sans: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans', 'Microsoft YaHei', sans-serif;--display: 'Archivo Black', 'Arial Black', 'Noto Sans SC', sans-serif;--mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;}div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;position:relative;padding:64px 84px 70px;background:#ffffff;color:var(--ink);font-family:var(--sans);font-size:30px;font-weight:500;line-height:1.6}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size: 30px}div#\:\$p > svg > foreignObject > section::before{content:'';position:absolute;top:30px;bottom:30px;left:60px;right:60px;border-left:2px dashed var(--grid);border-right:2px dashed var(--grid);pointer-events:none}div#\:\$p > svg > foreignObject > section::after{content:attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);position:absolute;right:12px;bottom:8px;font-family:var(--mono);font-size:15px;font-weight:700;letter-spacing:0.08em;color:#c9b96c}div#\:\$p > svg > foreignObject > section::after{--marpit-root-font-size: 15px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){margin:0.4em 0 0.2em;font-size:1.5em}div#\:\$p > svg > foreignObject > section p{margin:0.6em 0}div#\:\$p > svg > foreignObject > section ol{margin:10px 0;padding-left:2em}div#\:\$p > svg > foreignObject > section blockquote{margin:10px 0;padding:4px 16px;border-left:6px solid var(--yellow);color:var(--gray)}div#\:\$p > svg > foreignObject > section strong{font-weight:800;color:var(--ink)}div#\:\$p > svg > foreignObject > section em{font-style:normal;color:var(--gray);font-size:0.82em;font-weight:500}div#\:\$p > svg > foreignObject > section code{font-family:var(--mono);font-size:0.8em;font-weight:700;color:#7a7a7a;background:#f6f1de;padding:1px 8px;border-radius:3px}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){position:relative;margin:0 0 10px;padding:0 120px 14px 0;border-bottom:2px dashed var(--grid);color:var(--yellow);font-weight:900;font-size:40px;line-height:1.25}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::after{content:'</>';position:absolute;right:2px;top:2px;color:var(--ink);font-family:var(--mono);font-size:30px;font-weight:700;letter-spacing:-0.05em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){display:inline-block;margin:24px 0 8px;padding:2px 16px 4px;background:var(--yellow);color:var(--ink);font-weight:900;font-size:28px;letter-spacing:0.05em;line-height:1.4}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) + :is(h3, marp-h3){margin-top:26px}div#\:\$p > svg > foreignObject > section ul{list-style:none;margin:10px 0;padding:0}div#\:\$p > svg > foreignObject > section ul li{position:relative;padding-left:30px;margin:12px 0}div#\:\$p > svg > foreignObject > section ul li::before{content:'';position:absolute;left:2px;top:0.56em;width:13px;height:13px;background:var(--yellow)}div#\:\$p > svg > foreignObject > section ul ul{margin:4px 0 2px}div#\:\$p > svg > foreignObject > section ul ul li{margin:6px 0}div#\:\$p > svg > foreignObject > section ul ul li::before{top:0.6em;width:9px;height:9px;background:var(--yellow-soft)}div#\:\$p > svg > foreignObject > section table{border-collapse:collapse;width:100%;margin:16px 0 8px;font-size:25px}div#\:\$p > svg > foreignObject > section th{background:var(--yellow);color:var(--ink);font-weight:900;border:2.5px solid var(--ink);padding:9px 16px;text-align:left}div#\:\$p > svg > foreignObject > section td{border:2.5px solid var(--ink);padding:8px 16px;background:#ffffff}div#\:\$p > svg > foreignObject > section tr:nth-child(even) td{background:#fdf6dd}div#\:\$p > svg > foreignObject > section.roster table{font-size:18px;table-layout:fixed}div#\:\$p > svg > foreignObject > section.roster th:first-child, div#\:\$p > svg > foreignObject > section.roster td:first-child{width:350px}div#\:\$p > svg > foreignObject > section.roster th{padding:7px 14px}div#\:\$p > svg > foreignObject > section.roster td{padding:7px 14px}div#\:\$p > svg > foreignObject > section.side{display:flex;flex-direction:column;padding-right:var(--side-gap, 540px);padding-bottom:200px}div#\:\$p > svg > foreignObject > section.side :is(h2, marp-h2){font-size:34px}div#\:\$p > svg > foreignObject > section.side :is(h3, marp-h3){font-size:30px;margin-top:auto}div#\:\$p > svg > foreignObject > section.side :is(h3, marp-h3) + p{font-size:24px;margin:10px 0 0}div#\:\$p > svg > foreignObject > section.side :is(h4, marp-h4){position:absolute;left:84px;bottom:44px;margin:0;font-family:var(--display);font-weight:400;font-size:92px;line-height:1;color:transparent;-webkit-text-stroke:3px var(--yellow);pointer-events:none}div#\:\$p > svg > foreignObject > section.todo{display:flex;flex-direction:column}div#\:\$p > svg > foreignObject > section.todo :is(h3, marp-h3){margin-top:auto}div#\:\$p > svg > foreignObject > section.lead{padding-top:268px}div#\:\$p > svg > foreignObject > section.lead::before{content:'';position:absolute;top:0;left:0;right:0;height:196px;background:var(--yellow);border:none}div#\:\$p > svg > foreignObject > section.lead :is(h2, marp-h2){position:absolute;top:142px;left:84px;right:84px;margin:0;padding:0;border:none;color:var(--ink);font-weight:700;font-size:21px}div#\:\$p > svg > foreignObject > section.lead :is(h2, marp-h2)::after{content:'Computer Psycho Union\A University of Nottingham Ningbo China';position:absolute;top:-74px;right:0;white-space:pre;text-align:right;color:var(--ink);font-weight:900;font-size:18px;line-height:1.5}div#\:\$p > svg > foreignObject > section.lead :is(h1, marp-h1){position:absolute;top:32px;left:84px;right:470px;margin:0;color:var(--ink);font-weight:900;font-size:44px;line-height:1.22}div#\:\$p > svg > foreignObject > section.lead p{margin:0 0 12px;font-weight:700;font-size:23px}div#\:\$p > svg > foreignObject > section.lead p + p{margin-top:2px;font-weight:500;font-size:17px;color:var(--gray)}div#\:\$p > svg > foreignObject > section.lead :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section.lead :is(h4, marp-h4){position:absolute;right:84px;display:block;margin:0;padding:0;background:none;font-family:var(--display);font-weight:400;line-height:0.96;pointer-events:none}div#\:\$p > svg > foreignObject > section.lead :is(h3, marp-h3){bottom:150px;font-size:100px;color:transparent;-webkit-text-stroke:3.5px var(--yellow)}div#\:\$p > svg > foreignObject > section.lead :is(h4, marp-h4){bottom:46px;font-size:80px;color:var(--yellow)}div#\:\$p > svg > foreignObject > section.agenda ol{list-style:none;counter-reset:item;margin:34px 0 0;padding:0}div#\:\$p > svg > foreignObject > section.agenda ol li{counter-increment:item;position:relative;display:block;padding:24px 16px 24px 128px;margin:0;border-bottom:2px dashed var(--grid);font-weight:900;font-size:30px;line-height:1.35}div#\:\$p > svg > foreignObject > section.agenda ol li::before{content:'0' counter(item);position:absolute;left:6px;top:50%;transform:translateY(-50%);font-family:var(--display);font-weight:400;font-size:54px;line-height:1;color:var(--yellow-soft)}div#\:\$p > svg > foreignObject > section.agenda ol li:first-child{background:var(--yellow)}div#\:\$p > svg > foreignObject > section.agenda ol li:first-child::before{color:#ffffff}div#\:\$p > svg > foreignObject > section.agenda ol li:first-child em{color:rgba(17, 17, 17, 0.72)}div#\:\$p > svg > foreignObject > section.activities{font-size:20px}div#\:\$p > svg > foreignObject > section.activities{--marpit-root-font-size: 20px}div#\:\$p > svg > foreignObject > section.activities :is(h3, marp-h3){margin:14px 0 6px}div#\:\$p > svg > foreignObject > section.activities ul{margin:4px 0}div#\:\$p > svg > foreignObject > section.activities ul li{margin:8px 0}div#\:\$p > svg > foreignObject > section.yellow{background:var(--yellow)}div#\:\$p > svg > foreignObject > section.yellow::before{border-color:rgba(255, 255, 255, 0.55)}div#\:\$p > svg > foreignObject > section.yellow::after{content:attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);color:rgba(17, 17, 17, 0.6)}div#\:\$p > svg > foreignObject > section.lead::after{content:attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);color:transparent}div#\:\$p > svg > foreignObject > section.yellow :is(h2, marp-h2){position:absolute;top:46px;right:84px;left:auto;margin:0;padding:0;border:none;color:transparent;font-family:var(--display);font-weight:400;font-size:96px;line-height:1;-webkit-text-stroke:3px #ffffff}div#\:\$p > svg > foreignObject > section.yellow :is(h2, marp-h2)::after{content:none}div#\:\$p > svg > foreignObject > section.yellow :is(h3, marp-h3){position:absolute;top:172px;left:84px;display:block;margin:0;padding:0;background:none;color:#ffffff;font-family:var(--display);font-weight:400;font-size:96px;line-height:1}div#\:\$p > svg > foreignObject > section.yellow :is(h4, marp-h4){position:absolute;top:352px;left:84px;display:block;margin:0;padding:0;background:none;color:var(--ink);font-weight:900;font-size:88px;line-height:1.15}div#\:\$p > svg > foreignObject > section.yellow p{position:absolute;left:84px;bottom:84px;margin:0;color:var(--ink);font-weight:700;font-size:20px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-U01RKOw4]{font-size:45px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-U01RKOw4]{--marpit-root-font-size: 45px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-U01RKOw4] ul li{margin:16px 0!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-U01RKOw4] ul ul li{margin:10px 0!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-U01RKOw4] ul li::before{width:15px!important;height:15px!important;background:var(--yellow)!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-rH0E6FeM]{padding-right:476px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-rH0E6FeM] .side-shot{position:absolute;top:0;right:-100px;width:640px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-rH0E6FeM] .side-shot img{width:100%;height:100%;object-fit:contain;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-surcincz].activities{font-size:30px;padding-right:450px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-surcincz].activities{--marpit-root-font-size: 30px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-surcincz].activities :is(h2, marp-h2){font-size:36px!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-surcincz].activities :is(h3, marp-h3){font-size:34px!important;margin:14px 0 6px!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-surcincz].activities ul li{font-size:30px;margin:4px 0!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-surcincz].activities ul li::before{width:16px;height:16px;top:0.6em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-surcincz] .teletype-shot{position:absolute;top:-350px;right:-500px;width:920px;height:1440px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-surcincz] .teletype-shot img{width:100%;height:100%;object-fit:contain;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-VFah7cAS].activities{font-size:30px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-VFah7cAS].activities{--marpit-root-font-size: 30px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-VFah7cAS].activities :is(h2, marp-h2){font-size:36px!important;margin-bottom:6px!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-VFah7cAS].activities :is(h3, marp-h3){font-size:34px!important;margin:10px 0 5px!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-VFah7cAS].activities ul li{font-size:30px;margin:3px 0!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-VFah7cAS].activities ul li::before{width:16px;height:16px;top:0.6em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-VFah7cAS] .dos-band{position:absolute;left:0;right:0;bottom:0;height:240px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-VFah7cAS] .dos-band img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-jazJP06Q].activities{font-size:30px;padding-right:580px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-jazJP06Q].activities{--marpit-root-font-size: 30px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-jazJP06Q].activities :is(h3, marp-h3){font-size:34px!important;margin:20px 0 8px!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-jazJP06Q].activities ul li{font-size:30px;margin:9px 0!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-jazJP06Q].activities ul li::before{width:16px;height:16px;top:0.6em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-jazJP06Q] .side-shot{position:absolute;top:0;right:0;width:538px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-jazJP06Q] .side-shot img{width:100%;height:100%;object-fit:cover;object-position:left center;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-MirUFNtP].activities{font-size:30px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-MirUFNtP].activities{--marpit-root-font-size: 30px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-MirUFNtP].activities :is(h3, marp-h3){font-size:34px!important;margin:20px 0 8px!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-MirUFNtP].activities ul li{font-size:30px;margin:9px 0!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-MirUFNtP].activities ul li::before{width:16px;height:16px;top:0.6em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-y3Vued9m]{padding-right:476px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-y3Vued9m] ul li{margin:6px 0!important}div#\:\$p > svg > foreignObject > section[data-marpit-scope-y3Vued9m] .side-shot{position:absolute;top:0;right:-200px;width:640px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-y3Vued9m] .side-shot img{width:100%;height:100%;object-fit:contain;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-k25PMTrC]{padding-right:676px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-k25PMTrC] .menu-shot{position:absolute;top:0;right:0;width:640px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-k25PMTrC] .menu-shot img{width:100%;height:100%;object-fit:contain;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-uBJMgruU]{padding-right:676px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-uBJMgruU] .side-shot{position:absolute;top:0;right:0;width:640px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-uBJMgruU] .side-shot img{width:100%;height:100%;object-fit:cover;object-position:left center;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6emRIeGy]{padding-right:676px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6emRIeGy] .side-shot{position:absolute;top:0;right:0;width:640px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6emRIeGy] .side-shot img{width:100%;height:100%;object-fit:contain;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-oc9dpgyE]{padding-right:676px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-oc9dpgyE] .side-shot{position:absolute;top:0;right:0;width:640px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-oc9dpgyE] .side-shot img{width:100%;height:100%;object-fit:contain;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-p2LwJv7c]{padding-right:676px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-p2LwJv7c] .side-shot{position:absolute;top:0;right:0;width:640px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-p2LwJv7c] .side-shot img{width:100%;height:100%;object-fit:contain;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dbuqISZW]{padding-right:476px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dbuqISZW] .side-shot{position:absolute;top:0;right:-200px;width:640px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dbuqISZW] .side-shot img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-zBG1LbZo]{padding-right:476px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-zBG1LbZo] .side-shot{position:absolute;top:0;right:-150px;width:640px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-zBG1LbZo] .side-shot img{width:100%;height:100%;object-fit:contain;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .shot-row{display:flex;gap:30px;align-items:flex-start;margin-top:6px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .shot-wrap{position:relative;width:760px;flex:none}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .shot-wrap img{width:100%;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .chip{position:absolute;transform:translate(-50%, -50%);width:48px;height:48px;border-radius:50%;background:#f7d447;border:3px solid #111111;color:#111111;font-weight:900;font-size:25px;display:flex;align-items:center;justify-content:center}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] div#\:\$p > svg > foreignObject > section section.chip{--marpit-root-font-size: 25px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .chip.c1{left:2.5%;top:56%}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .chip.c2{left:13%;top:38%}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .chip.c3{left:62%;top:30%}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .chip.c4{left:47%;top:96%}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .legend{flex:1;height:475px;display:flex;flex-direction:column;justify-content:space-evenly}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .lrow{display:flex;align-items:baseline;gap:12px;margin:15px 0;font-size:19px;line-height:1.4}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] div#\:\$p > svg > foreignObject > section section.lrow{--marpit-root-font-size: 19px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .lrow .num{flex:none;width:40px;height:40px;border-radius:50%;background:#f7d447;border:2.5px solid #111111;font-weight:900;font-size:25px;display:flex;align-items:center;justify-content:center;align-self:center}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .lrow div#\:\$p > svg > foreignObject > section section.num{--marpit-root-font-size: 25px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .lrow strong{display:block;font-size:30px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-ZDUq2nTT] .lrow :is(span, marp-span){display:block;color:#a3a3a3;font-size:16px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-kSt6OS0G]{padding-right:606px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-kSt6OS0G] .side-shot{position:absolute;top:0;right:0;width:640px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-kSt6OS0G] .side-shot img{width:100%;height:100%;object-fit:contain;display:block}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .loop{display:flex;align-items:stretch;gap:26px;margin-top:30px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .zone{border:2.5px dashed #c9b96c;padding:18px 16px 20px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .zone-tag{display:inline-block;background:#f7d447;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:15px;letter-spacing:0.06em;padding:2px 10px;margin-bottom:12px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] div#\:\$p > svg > foreignObject > section section.zone-tag{--marpit-root-font-size: 15px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .zone.laptop{flex:1.6}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .zone.cloud{flex:1;display:flex;flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .zone.cloud .box{flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .pair{display:flex;align-items:center;gap:10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .box{background:#ffffff;border:3px solid #111111;padding:10px 14px;flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .box strong{display:block;font-size:21px;font-weight:900}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .box :is(span, marp-span){display:block;color:#a3a3a3;font-size:16px;margin-top:2px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .arrow{flex:none;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:16px;white-space:nowrap}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] div#\:\$p > svg > foreignObject > section section.arrow{--marpit-root-font-size: 16px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dqLuAGZv] .link-col{display:flex;flex-direction:column;justify-content:center;gap:14px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dHuY4n5j] .iconstrip{display:flex;align-items:center;justify-content:center;gap:48px;margin-top:44px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dHuY4n5j] .iconstrip .step{display:flex;flex-direction:column;align-items:center;gap:14px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dHuY4n5j] .iconstrip img{width:96px;height:96px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dHuY4n5j] .iconstrip :is(span, marp-span){display:block;font-size:22px;font-weight:700;line-height:1.3;text-align:center}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dHuY4n5j] .iconstrip :is(span, marp-span) em{display:block;font-style:normal;color:#a3a3a3;font-size:17px;font-weight:500;margin-top:4px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dHuY4n5j] .iconstrip .join{font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:34px;color:#a3a3a3}div#\:\$p > svg > foreignObject > section[data-marpit-scope-dHuY4n5j] .iconstrip div#\:\$p > svg > foreignObject > section section.join{--marpit-root-font-size: 34px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .md-cols{display:flex;gap:26px;margin-top:10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .md-col{flex:1;display:flex;flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .md-col :is(pre, marp-pre), div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .rendered{flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .md-col .tag{display:inline-block;background:#f7d447;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:15px;letter-spacing:0.06em;padding:2px 10px;margin-bottom:10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .md-col div#\:\$p > svg > foreignObject > section section.tag{--marpit-root-font-size: 15px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .md-col :is(pre, marp-pre){margin:0;background:#f6f1de;border:2.5px solid #111111;padding:14px 18px;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-size:17px;line-height:1.5;white-space:pre-wrap}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .rendered{background:#ffffff;border:2.5px solid #111111;padding:12px 18px 10px;min-height:176px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .rendered .h1{font-weight:900;font-size:26px;line-height:1.2}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .rendered div#\:\$p > svg > foreignObject > section section.h1{--marpit-root-font-size: 26px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .rendered .h2{font-weight:900;font-size:21px;margin-top:6px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .rendered div#\:\$p > svg > foreignObject > section section.h2{--marpit-root-font-size: 21px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .rendered ul{margin:6px 0}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .rendered li{margin:4px 0;font-size:19px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .rendered .lnk{color:#7a7a7a;text-decoration:underline;font-size:18px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FiunJlUA] .rendered div#\:\$p > svg > foreignObject > section section.lnk{--marpit-root-font-size: 18px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .md-cols{display:flex;gap:26px;margin-top:14px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .md-col{flex:1;display:flex;flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .md-col :is(pre, marp-pre), div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .rendered{flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .md-col .tag{display:inline-block;background:#f7d447;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:15px;letter-spacing:0.06em;padding:2px 10px;margin-bottom:10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .md-col div#\:\$p > svg > foreignObject > section section.tag{--marpit-root-font-size: 15px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .md-col :is(pre, marp-pre){margin:0;background:#f6f1de;border:2.5px solid #111111;padding:14px 18px;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-size:19px;line-height:1.55;white-space:pre-wrap}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .rendered{background:#ffffff;border:2.5px solid #111111;padding:14px 18px 12px;min-height:200px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .rh1{font-weight:900;font-size:34px;line-height:1.2}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] div#\:\$p > svg > foreignObject > section section.rh1{--marpit-root-font-size: 34px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .rh2{font-weight:900;font-size:26px;margin-top:8px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] div#\:\$p > svg > foreignObject > section section.rh2{--marpit-root-font-size: 26px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] .rh3{font-weight:900;font-size:21px;margin-top:6px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-6hJl6xGD] div#\:\$p > svg > foreignObject > section section.rh3{--marpit-root-font-size: 21px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .md-cols{display:flex;gap:26px;margin-top:14px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .md-col{flex:1;display:flex;flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .md-col :is(pre, marp-pre), div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .rendered{flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .md-col .tag{display:inline-block;background:#f7d447;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:15px;letter-spacing:0.06em;padding:2px 10px;margin-bottom:10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .md-col div#\:\$p > svg > foreignObject > section section.tag{--marpit-root-font-size: 15px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .md-col :is(pre, marp-pre){margin:0;background:#f6f1de;border:2.5px solid #111111;padding:14px 18px;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-size:19px;line-height:1.55;white-space:pre-wrap}div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .rendered{background:#ffffff;border:2.5px solid #111111;padding:16px 18px 12px;min-height:200px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .rendered .row{font-size:26px;margin:14px 0}div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .rendered div#\:\$p > svg > foreignObject > section section.row{--marpit-root-font-size: 26px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-scEy4gFo] .rendered em{font-style:italic;color:#111111;font-size:1em;font-weight:inherit}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .md-cols{display:flex;gap:26px;margin-top:14px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .md-col{flex:1;display:flex;flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .md-col :is(pre, marp-pre), div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .rendered{flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .md-col .tag{display:inline-block;background:#f7d447;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:15px;letter-spacing:0.06em;padding:2px 10px;margin-bottom:10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .md-col div#\:\$p > svg > foreignObject > section section.tag{--marpit-root-font-size: 15px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .md-col :is(pre, marp-pre){margin:0;background:#f6f1de;border:2.5px solid #111111;padding:14px 18px;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-size:19px;line-height:1.55;white-space:pre-wrap}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .rendered{background:#ffffff;border:2.5px solid #111111;padding:14px 18px 12px;min-height:200px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .rendered ul{margin:8px 0}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .rendered li{font-size:23px;margin:6px 0}div#\:\$p > svg > foreignObject > section[data-marpit-scope-qtWM5mXk] .rendered ol{margin:10px 0;padding-left:2em}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .md-cols{display:flex;gap:26px;margin-top:14px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .md-col{flex:1;display:flex;flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .md-col :is(pre, marp-pre), div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .rendered{flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .md-col .tag{display:inline-block;background:#f7d447;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:15px;letter-spacing:0.06em;padding:2px 10px;margin-bottom:10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .md-col div#\:\$p > svg > foreignObject > section section.tag{--marpit-root-font-size: 15px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .md-col :is(pre, marp-pre){margin:0;background:#f6f1de;border:2.5px solid #111111;padding:14px 18px;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-size:19px;line-height:1.55;white-space:pre-wrap}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .rendered{background:#ffffff;border:2.5px solid #111111;padding:14px 18px 12px;min-height:200px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .rendered .line{font-size:22px;margin:6px 0}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .rendered div#\:\$p > svg > foreignObject > section section.line{--marpit-root-font-size: 22px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .codeblock{background:#161311;color:#f2ecd9;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-size:19px;line-height:1.5;padding:12px 16px;margin-top:10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] div#\:\$p > svg > foreignObject > section section.codeblock{--marpit-root-font-size: 19px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bsx24uf3] .codeblock .kw{color:#f7d447}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .md-cols{display:flex;gap:26px;margin-top:14px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .md-col{flex:1;display:flex;flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .md-col :is(pre, marp-pre), div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .rendered{flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .md-col .tag{display:inline-block;background:#f7d447;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:15px;letter-spacing:0.06em;padding:2px 10px;margin-bottom:10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .md-col div#\:\$p > svg > foreignObject > section section.tag{--marpit-root-font-size: 15px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .md-col :is(pre, marp-pre){margin:0;background:#f6f1de;border:2.5px solid #111111;padding:14px 18px;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-size:19px;line-height:1.55;white-space:pre-wrap}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .rendered{background:#ffffff;border:2.5px solid #111111;padding:14px 18px 12px;min-height:200px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .rendered .row{font-size:23px;margin:12px 0}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .rendered div#\:\$p > svg > foreignObject > section section.row{--marpit-root-font-size: 23px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .lnk{color:#7a7a7a;text-decoration:underline}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .imgdemo{width:190px;border:3px solid #111111;padding:10px;margin-top:8px;text-align:center}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .imgdemo .sq{width:64px;height:64px;background:#f7d447;border:3px solid #111111;margin:0 auto}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .imgdemo .cap{font-size:16px;font-weight:700;color:#a3a3a3;margin-top:8px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-u9kMxM24] .imgdemo div#\:\$p > svg > foreignObject > section section.cap{--marpit-root-font-size: 16px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pYLpCVKW] .md-cols{display:flex;gap:26px;margin-top:14px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pYLpCVKW] .md-col{flex:1;display:flex;flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pYLpCVKW] .md-col :is(pre, marp-pre), div#\:\$p > svg > foreignObject > section[data-marpit-scope-pYLpCVKW] .rendered{flex:1}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pYLpCVKW] .md-col .tag{display:inline-block;background:#f7d447;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:15px;letter-spacing:0.06em;padding:2px 10px;margin-bottom:10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pYLpCVKW] .md-col div#\:\$p > svg > foreignObject > section section.tag{--marpit-root-font-size: 15px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pYLpCVKW] .md-col :is(pre, marp-pre){margin:0;background:#f6f1de;border:2.5px solid #111111;padding:14px 18px;font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-size:19px;line-height:1.55;white-space:pre-wrap}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pYLpCVKW] .rendered{background:#ffffff;border:2.5px solid #111111;padding:14px 18px 14px;min-height:200px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pYLpCVKW] .rendered blockquote{margin:10px 0;padding:4px 16px;border-left:6px solid #f7d447;color:#7a7a7a;font-size:21px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-pYLpCVKW] .rendered table{font-size:20px;margin:12px 0}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .chain{display:flex;align-items:stretch;gap:18px;margin-top:16px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .card{flex:1;border:3px solid #111111;padding:16px 14px 12px;text-align:center;background:#ffffff}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .card img{width:66px;height:66px;display:block;margin:0 auto 8px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .card .glyph{font-family:'Archivo Black', 'Arial Black', sans-serif;font-size:52px;line-height:66px;height:66px;margin-bottom:8px;color:#111111}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .card div#\:\$p > svg > foreignObject > section section.glyph{--marpit-root-font-size: 52px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .card .verb{background:#f7d447;display:inline-block;font-weight:900;font-size:17px;letter-spacing:0.08em;padding:1px 10px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .card div#\:\$p > svg > foreignObject > section section.verb{--marpit-root-font-size: 17px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .card .name{font-weight:900;font-size:21px;margin-top:8px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .card div#\:\$p > svg > foreignObject > section section.name{--marpit-root-font-size: 21px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .card .what{color:#a3a3a3;font-size:15.5px;line-height:1.35;margin-top:4px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .card div#\:\$p > svg > foreignObject > section section.what{--marpit-root-font-size: 15.5px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .later{display:flex;align-items:center;gap:16px;margin-top:22px;border:2.5px dashed #c9b96c;padding:8px 18px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .later img{width:44px;height:44px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .later .txt{font-family:ui-monospace, 'SF Mono', Menlo, monospace;font-weight:700;font-size:18px;letter-spacing:0.04em;color:#7a7a7a}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FnTU4595] .later div#\:\$p > svg > foreignObject > section section.txt{--marpit-root-font-size: 18px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="overview" tabindex="-1" title="Toggle overview view (o)">Toggle overview view</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-class="lead" data-theme="cpu" lang="C" class="lead" data-marpit-pagination="1" style="--paginate:true;--class:lead;--theme:cpu;" data-marpit-pagination-total="51">
+<h1 id="how-do-i-build-things">How do I build things?</h1>
+<h2 id="vs-code--terminal--git--github--your-first-toolchain">VS Code · Terminal · Git &amp; GitHub — your first toolchain</h2>
+<p>Lesson 0 · Session 04 — CPU Tech Group</p>
+<p>7 October 2026</p>
+<h3 id="lesson-0">LESSON 0</h3>
+<h4 id="toolchains">TOOLCHAINS</h4>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-class="agenda" data-theme="cpu" lang="C" class="agenda" data-marpit-pagination="2" style="--paginate:true;--class:agenda;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="the-plan-for-today">The plan for today</h2>
+<ol>
+<li>The need - <em>week one, in five scenes</em></li>
+<li>Terminal - <em>the fifty-year-old interface</em></li>
+<li>VS Code - <em>where you write code</em></li>
+<li>Git &amp; GitHub - <em>keep and share</em></li>
+<li>Markdown &amp; more toolchains - <em>how it fits together</em></li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-class="yellow" data-theme="cpu" lang="C" class="yellow" data-marpit-pagination="3" style="--paginate:true;--class:yellow;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="the-need">THE NEED</h2>
+<h3 id="01">01</h3>
+<h4 id="here-comes-some-todos">Here comes some TODOs</h4>
+<p>Lesson 0 · The toolchain — CPU Tech Group</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-marpit-scope-U01RKOw4="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="4" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="01--week-one-in-five-scenes">01 · Week one, in five scenes</h2>
+<br />
+
+<ul>
+<li><strong>Write a program</strong> — tip calculator · due Friday
+<ul>
+<li><strong>Make it run</strong> — on the grader's machine too
+<ul>
+<li><strong>Hand it in</strong> — Moodle zip · later, a Git repo
+<ul>
+<li><strong>Team project</strong> — four people · one codebase
+<ul>
+<li><strong>Read code</strong> — tutorials → research</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-class="yellow" data-theme="cpu" lang="C" class="yellow" data-marpit-pagination="5" style="--paginate:true;--class:yellow;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="terminal">TERMINAL</h2>
+<h3 id="02">02</h3>
+<h4 id="where-it-all-began">Where it all began</h4>
+<p>Lesson 0 · The toolchain — CPU Tech Group</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-marpit-scope-rH0E6FeM="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="6" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--the-scene--first-friday-2147">02 · The scene — first Friday, 21:47</h2>
+
+<blockquote>
+<p><strong>&quot;your code must run on the lab server&quot;</strong> — coursework spec, week 1</p>
+</blockquote>
+<ul>
+<li><strong>You log in</strong> — no desktop · no icons</li>
+<li><strong>One black window</strong> · <strong>The mouse does nothing</strong> · a blinking cursor</li>
+<li><strong>It waits for a line from you</strong></li>
+</ul>
+<p><em>Where did this thing come from? 1969.</em></p>
+<div class="side-shot">
+  <img src="assets/terminal.png" alt="A terminal waiting for a command" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-scope-surcincz="" data-paginate="true" data-class="activities" data-theme="cpu" lang="C" class="activities" data-marpit-pagination="7" style="--paginate:true;--class:activities;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--fifty-years-one-window--1969%E2%80%931978">02 · Fifty years, one window — 1969–1978</h2>
+<div class="teletype-shot">
+  <img src="assets/WACsOperateTeletype.jpg" alt="WACs operating teletypes" />
+</div>
+<h3 id="1969--the-teletype">1969 · THE TELETYPE</h3>
+<ul>
+<li><strong>Teletype</strong> — keyboard + paper</li>
+<li><strong>One room-sized machine</strong> — many users</li>
+<li><strong>Unix is born here</strong> — everything is a command</li>
+</ul>
+<h3 id="1978--the-glass-terminal">1978 · THE GLASS TERMINAL</h3>
+<ul>
+<li><strong>VT100</strong> — paper becomes a screen</li>
+<li><strong>Shell</strong> — 1977 · the program reading your lines</li>
+<li><strong>Terminal.app</strong> — this screen, emulated</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-scope-VFah7cAS="" data-paginate="true" data-class="activities" data-theme="cpu" lang="C" class="activities" data-marpit-pagination="8" style="--paginate:true;--class:activities;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--fifty-years-one-window--1981%E2%80%931984">02 · Fifty years, one window — 1981–1984</h2>
+
+<h3 id="1981--the-pc-joins-in">1981 · THE PC JOINS IN</h3>
+<ul>
+<li><strong>IBM PC + MS-DOS</strong> — boots straight to <code>C:\&gt;</code></li>
+<li><strong>COMMAND.COM</strong> — the DOS shell</li>
+</ul>
+<h3 id="1984--gui-arrives">1984 · GUI ARRIVES</h3>
+<ul>
+<li><strong>Macintosh</strong> — windows · icons · mouse</li>
+<li><strong>Point-and-click wins the home</strong></li>
+</ul>
+<div class="dos-band">
+  <img src="assets/ms-dos.png" alt="MS-DOS prompt" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-scope-jazJP06Q="" data-paginate="true" data-class="activities" data-theme="cpu" lang="C" class="activities" data-marpit-pagination="9" style="--paginate:true;--class:activities;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--fifty-years-one-window--1985%E2%80%932006">02 · Fifty years, one window — 1985–2006</h2>
+
+<h3 id="1985--windows-on-top">1985 · WINDOWS ON TOP</h3>
+<ul>
+<li><strong>Windows 1.0</strong> — a GUI riding on DOS</li>
+<li><strong>The prompt never left</strong> — one <code>cmd</code> away</li>
+</ul>
+<h3 id="2006--powershell">2006 · POWERSHELL</h3>
+<ul>
+<li><strong>Objects, not just text</strong></li>
+<li><strong>Scriptable everything</strong> — the admin's favourite</li>
+</ul>
+<div class="side-shot">
+  <img src="assets/PowerShell.png" alt="PowerShell console" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-scope-MirUFNtP="" data-paginate="true" data-class="activities" data-theme="cpu" lang="C" class="activities" data-marpit-pagination="10" style="--paginate:true;--class:activities;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--fifty-years-one-window--2016%E2%80%93today">02 · Fifty years, one window — 2016–today</h2>
+
+<h3 id="2016%E2%80%9319--modern-windows-shell">2016–19 · MODERN WINDOWS SHELL</h3>
+<ul>
+<li><strong>WSL</strong> — virtual Ubuntu · real <code>bash</code> inside Windows</li>
+<li><strong>Windows Terminal</strong> — tabs · themes</li>
+</ul>
+<h3 id="today">TODAY</h3>
+<ul>
+<li><strong>Never left</strong> — servers · scripts · supercomputers</li>
+<li><strong>Your laptop ships them</strong> — Terminal / PowerShell app · VS Code too</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-scope-y3Vued9m="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="11" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--the-black-window-in-two-words">02 · The black window, in two words</h2>
+<ul>
+<li><strong>Terminal</strong> — the window</li>
+<li><strong>Shell</strong> — the program inside · zsh · bash · PowerShell</li>
+<li><strong>Every button is a command</strong> underneath</li>
+<li><strong>You own several already</strong> — macOS · Windows · VS Code (<code>Ctrl + `</code>)</li>
+<li><strong>Why type?</strong> — chains · scripts · no screen needed</li>
+</ul>
+<div class="side-shot">
+  <img src="assets/icons/terminal.png" alt="Terminal" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-scope-k25PMTrC="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="12" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--you-might-be-familiar-with-these">02 · You might be familiar with these</h2>
+
+<blockquote>
+<p><strong>Open Finder / File Explorer</strong>,<br />
+<strong>Right-click</strong><br />
+<img class="emoji" draggable="false" alt="⬇️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2b07.svg" data-marp-twemoji=""/><br />
+<strong>New</strong><br />
+<img class="emoji" draggable="false" alt="⬇️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2b07.svg" data-marp-twemoji=""/><br />
+<strong>Folder</strong></p>
+<hr />
+<p><strong>Copy · Cut (Move) · Delete</strong></p>
+</blockquote>
+<div class="menu-shot">
+  <img src="assets/mkdir-touch.png" alt="mkdir and touch session" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-scope-uBJMgruU="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="13" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--look-inside--ls--cd">02 · Look inside — ls · cd</h2>
+
+<ul>
+<li><strong>Open a folder, look</strong> — <code>ls</code></li>
+<li><strong>Double-click in</strong> — <code>cd folder</code></li>
+<li><strong>Back out</strong> — <code>cd ..</code></li>
+<li><strong><code>.</code> = here · <code>..</code> = one level up</strong></li>
+</ul>
+<p><em>macOS · Linux: identical.</em></p>
+<div class="side-shot">
+  <img src="assets/finder.png" alt="Finder window" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-scope-6emRIeGy="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="14" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--new--mkdir--touch">02 · New — mkdir · touch</h2>
+
+<ul>
+<li><strong>New → Folder</strong> — <code>mkdir hello</code></li>
+<li><strong>New → Text Document</strong> — <code>touch a.txt</code></li>
+<li><strong>touch makes one thing</strong> — an empty file</li>
+<li><strong>Check it worked</strong> — <code>ls</code> again</li>
+</ul>
+<div class="side-shot">
+  <img src="assets/mkdir-touch.png" alt="New submenu: Folder, Text Document" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-scope-oc9dpgyE="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="15" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--copy-rename--cp--mv">02 · Copy, rename — cp · mv</h2>
+
+<ul>
+<li><strong>Copy &amp; Paste</strong> — <code>cp a.txt b.txt</code></li>
+<li><strong>Rename</strong> — <code>mv b.txt c.txt</code></li>
+<li><strong>Same command moves</strong> — <code>mv c.txt archive/</code></li>
+<li><strong>New name = rename · path = move</strong></li>
+</ul>
+<div class="side-shot">
+  <img src="assets/ls-cp-mv-rm.png" alt="ls cp mv rm session" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-scope-p2LwJv7c="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="16" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--delete--rm">02 · Delete — rm</h2>
+
+<ul>
+<li><strong>Delete</strong> — <code>rm c.txt</code> — gone</li>
+<li><strong>No Recycle Bin</strong> — no undo, no second chance</li>
+<li><strong>Whole folders</strong> — <code>rm -r project</code></li>
+<li><strong>Last line of the picture</strong> — <code>ls</code> again: c.txt is gone</li>
+</ul>
+<p><em>The one command to respect: <code>ls</code> before <code>rm</code>.</em></p>
+<div class="side-shot">
+  <img src="assets/ls-cp-mv-rm.png" alt="ls cp mv rm session" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="17" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--one-line-one-new-project">02 · One line, one new project</h2>
+<pre><code class="language-bash"><span class="hljs-built_in">mkdir</span> my-first-project &amp;&amp; <span class="hljs-built_in">cd</span> my-first-project &amp;&amp; code .
+</code></pre>
+<ul>
+<li><strong>Folder → in → open</strong> — zero mouse</li>
+<li><strong><code>.</code></strong> — &quot;here&quot;</li>
+<li><strong><code>&amp;&amp;</code></strong> — next runs only if the last succeeded</li>
+<li><strong>The line grows</strong> — <code>git init</code> · <code>git push</code> soon</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="18" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="02--where-it-will-find-you">02 · Where it will find you</h2>
+<ul>
+<li><strong>Installing</strong> — <code>pip install</code> · <code>brew install</code> · <code>winget install</code></li>
+<li><strong>Autograders</strong> — coursework runs from one</li>
+<li><strong>SSH</strong> — lab servers · cloud VMs · no GUI</li>
+<li><strong>Automation</strong> — 3am, nobody clicking</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-class="yellow" data-theme="cpu" lang="C" class="yellow" data-marpit-pagination="19" style="--paginate:true;--class:yellow;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="vs-code">VS CODE</h2>
+<h3 id="03">03</h3>
+<h4 id="where-the-code-gets-written">Where the code gets written</h4>
+<p>Lesson 0 · The toolchain — CPU Tech Group</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-scope-dbuqISZW="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="20" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="03--the-scene--tuesday-2340">03 · The scene — Tuesday, 23:40</h2>
+
+<blockquote>
+<p><strong>&quot;implement a tip calculator in Python&quot;</strong></p>
+</blockquote>
+<ul>
+<li><strong>hello.py in Notepad</strong> — all grey · no colours</li>
+<li><strong>A typo at line 40</strong> — half an hour gone</li>
+<li><strong>Word curls your quotes</strong> — Python explodes</li>
+<li><strong>No help is coming</strong></li>
+</ul>
+<p><em>Code needs a workshop — not a typewriter.</em></p>
+<div class="side-shot">
+  <img src="assets/word-coding.jpeg" alt="Writing code in Word" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-scope-zBG1LbZo="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="21" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="03--your-workshop-for-four-years">03 · Your workshop for four years</h2>
+<ul>
+<li><strong>Free · everywhere · lightweight</strong> <em>(itself)</em>
+<ul>
+<li>the world's default</li>
+</ul>
+</li>
+<li><strong>Bare on purpose</strong>
+<ul>
+<li>plugins / capabilities arrive as extensions</li>
+</ul>
+</li>
+</ul>
+<div class="side-shot">
+  <img src="assets/icons/vscode.png" alt="VS Code" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-scope-ZDUq2nTT="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="22" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="03--one-window-multiple-areas">03 · One window, multiple areas</h2>
+<div class="shot-row">
+  <div class="shot-wrap">
+    <img src="assets/vscode-window.png" alt="VS Code window" />
+    <div class="chip c1">1</div>
+    <div class="chip c2">2</div>
+    <div class="chip c3">3</div>
+    <div class="chip c4">4</div>
+  </div>
+  <div class="legend">
+    <div class="lrow"><div class="num">1</div><div><strong>Activity Bar</strong><span>files · search · git · extensions</span></div></div>
+    <div class="lrow"><div class="num">2</div><div><strong>Explorer</strong><span>your project's files</span></div></div>
+    <div class="lrow"><div class="num">3</div><div><strong>Editor</strong><span>tabs · code · minimap</span></div></div>
+    <div class="lrow"><div class="num">4</div><div><strong>Status Bar</strong><span>branch · Ln/Col · language</span></div></div>
+  </div>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="23" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="03--teaching-the-editor-your-language">03 · Teaching the editor your language</h2>
+<ul>
+<li><strong>Step 1 — add the language</strong> — Python extension</li>
+<li><strong>Step 2 — pick the interpreter/compiler</strong> — the status-bar picker</li>
+<li><strong>Step 3 — Run</strong> — output in the panel below</li>
+<li><strong>Same pattern forever</strong> — C/C++ · Java · Rust<br />
+<img src="image/slides/1791302677119.png" alt="" style="width:1050px;" /></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="24" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="03--extensions-worth-installing-today">03 · Extensions worth installing today</h2>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pylance</strong></td>
+<td>intelligent Python language support</td>
+</tr>
+<tr>
+<td><strong>Remote - SSH</strong></td>
+<td>connect to remote servers</td>
+</tr>
+<tr>
+<td><strong>Prettier</strong></td>
+<td>one format for the team</td>
+</tr>
+<tr>
+<td><strong>Error Lens</strong></td>
+<td>see errors in your code</td>
+</tr>
+<tr>
+<td><strong>Live Share</strong></td>
+<td>collaborate in real-time</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ctrl+Shift+X · all free · can't say why? Uninstall.</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="25" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="03--two-shortcuts-and-one-habit">03 · Two shortcuts and one habit</h2>
+<ul>
+<li><strong>Ctrl/Cmd + Shift + P</strong> — Command Palette — every command</li>
+<li><strong>Ctrl/Cmd + P</strong> — Quick Open — any file</li>
+<li><strong>Auto Save: afterDelay</strong> — crashes stop eating homework</li>
+</ul>
+<p><em>Twice with the mouse this week? It has a shortcut.</em></p>
+<p><img src="assets/vsc-auto-save.png" alt="" style="width:1100px;" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-marpit-scope-kSt6OS0G="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="26" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="03--beyond-vscode">03 · Beyond VSCode</h2>
+<ul>
+<li><strong>JetBrains</strong> — PyCharm · IntelliJ · CLion — student licences</li>
+<li><strong>Vim</strong> — master in terminal</li>
+<li><strong>Cursor</strong> — AI-first · VS Code base</li>
+</ul>
+<div class="side-shot">
+  <img src="assets/icons/pycharm.png" alt="PyCharm" />
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-class="yellow" data-theme="cpu" lang="C" class="yellow" data-marpit-pagination="27" style="--paginate:true;--class:yellow;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="git--github">GIT &amp; GITHUB</h2>
+<h3 id="04">04</h3>
+<h4 id="keep-everything-share-everything">Keep everything, share everything</h4>
+<p>Lesson 0 · The toolchain — CPU Tech Group</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="28" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--the-scene--a-filename-horror-story">04 · The scene — a filename horror story</h2>
+<pre><code class="language-text">essay.docx -&gt; essay_v2.docx -&gt; essay_final.docx -&gt; essay_final_REAL.docx
+</code></pre>
+<ul>
+<li><strong>You edit every day</strong> — every day it changes</li>
+<li><strong>Copies everywhere</strong> — USB · cloud drive · emailed to yourself</li>
+<li><strong>3am, it breaks</strong> — which one still worked?</li>
+<li><strong>&quot;final&quot; means nothing</strong></li>
+</ul>
+<p><em>There has to be a better way.</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="29" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--one-folder-five-needs">04 · One folder, five needs</h2>
+<ul>
+<li><strong>Go back</strong> — yesterday's version, please
+<ul>
+<li><strong>See what changed</strong> — since it last worked
+<ul>
+<li><strong>Survive the laptop</strong> — dies · stolen · left in the library
+<ul>
+<li><strong>Work together</strong> — four people · one codebase
+<ul>
+<li><strong>Show your work</strong> — the world, eventually</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="30" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--need-one--take-me-back">04 · Need one — &quot;take me back&quot;</h2>
+<blockquote>
+<p><strong>&quot;it worked yesterday&quot;</strong> — everyone, eventually</p>
+</blockquote>
+<ul>
+<li><strong>Copy the folder?</strong> — that's how essay_v2 was born</li>
+<li><strong>USB drive?</strong> — three versions, all stale</li>
+<li><strong>What you actually want</strong> — a save point · labelled · kept</li>
+<li><strong>Games solved this in 1990</strong></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="31" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--the-command--git-commit">04 · The command — git commit</h2>
+<ul>
+<li><strong><code>git commit</code></strong> — take a save point</li>
+<li><strong>The message</strong> — &quot;works, before refactor&quot; · honest, one line</li>
+<li><strong><code>git log</code></strong> — every save point you ever took</li>
+<li><strong>Never typed by you</strong> — Desktop's blue button, same command underneath</li>
+</ul>
+<p><img src="assets/git-commit.png" alt="commit" style="width:1115px;" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="32" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--need-two--what-changed">04 · Need two — &quot;what changed?&quot;</h2>
+<blockquote>
+<p><strong>&quot;it worked five minutes ago&quot;</strong></p>
+</blockquote>
+<ul>
+<li><strong>Scroll and squint?</strong> — 400 lines</li>
+<li><strong>Microsoft Word</strong> never told you — what moved between two versions</li>
+<li><strong>You want</strong> — just the differences</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="33" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--the-commands--git-status--git-diff">04 · The commands — git status · git diff</h2>
+<ul>
+<li><strong><code>git status</code></strong> — which files changed in your workspace</li>
+<li><strong><code>git diff</code></strong> — which lines in each file · red gone · green new</li>
+<li><strong>Desktop shows the same</strong> — file list · line highlights</li>
+<li><strong>Look before you commit</strong> — same habit as <code>ls</code> before <code>rm</code></li>
+</ul>
+<p><img src="assets/git-diff.png" alt="git diff" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="34" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--need-three--its-on-my-other-machine">04 · Need three — &quot;it's on my other machine&quot;</h2>
+<ul>
+<li><strong>The laptop dies</strong> — or gets stolen · or stays in the library</li>
+<li><strong>Two computers</strong> — the dorm desktop · the lab</li>
+<li><strong>USB / WeChat yourself</strong> — version roulette</li>
+<li><strong>You want</strong> — same folder · everywhere · always current</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="35" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--the-answer--a-cloud-copy">04 · The answer — a cloud copy</h2>
+<ul>
+<li><strong>Git</strong> — the tool · on your laptop</li>
+<li><strong>GitHub</strong> — the site · your folder lives in the cloud</li>
+<li><strong><code>git push</code></strong> — upload your save points</li>
+<li><strong><code>git pull</code></strong> — bring the rest down</li>
+<li><strong>The driver</strong> — GitHub Desktop · buttons, not typing</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-marpit-scope-dqLuAGZv="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="36" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--the-loop-in-one-picture">04 · The loop, in one picture</h2>
+<div class="loop">
+  <div class="zone laptop">
+    <div class="zone-tag">YOUR LAPTOP</div>
+    <div class="pair">
+      <div class="box"><strong>Working folder</strong><span>hello.py — where you edit</span></div>
+      <div class="arrow">commit →</div>
+      <div class="box"><strong>Local history</strong><span>save points kept by Git</span></div>
+    </div>
+  </div>
+  <div class="link-col">
+    <div class="arrow">push →</div>
+    <div class="arrow">← pull</div>
+  </div>
+  <div class="zone cloud">
+    <div class="zone-tag">GITHUB — CLOUD COPY</div>
+    <div class="box"><strong>Remote repository</strong><span>backup · teammates · the world</span></div>
+  </div>
+</div>
+<ul>
+<li><strong>commit</strong> — labelled save point, on your laptop</li>
+<li><strong>push</strong> — upload your save points</li>
+<li><strong>pull</strong> — download everyone else's</li>
+</ul>
+<p><em>edit · commit · push · pull — 90% of Git.</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-marpit-scope-dHuY4n5j="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="37" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--github-desktop--the-loop-no-cmd-typing">04 · GitHub Desktop — the loop, no cmd typing</h2>
+<ol>
+<li><strong>Clone</strong> — File → Clone repository</li>
+<li><strong>Edit in VS Code</strong> — Desktop lists every change</li>
+<li><strong>Commit</strong> — tick files · honest message · &quot;Commit to main&quot;</li>
+<li><strong>Push origin / Pull origin</strong> — yours up · theirs down</li>
+</ol>
+<p><em>Hover any button — Desktop shows the git command underneath.</em></p>
+<div class="iconstrip">
+  <div class="step">
+    <img src="assets/icons/vscode.png" alt="VS Code" />
+    <span>write<em>your laptop</em></span>
+  </div>
+  <div class="join">→</div>
+  <div class="step">
+    <img src="assets/icons/github-desktop.png" alt="GitHub Desktop" />
+    <span>commit · push<em>GitHub Desktop</em></span>
+  </div>
+  <div class="join">→</div>
+  <div class="step">
+    <img src="assets/icons/chrome.png" alt="Browser" />
+    <span>see it online<em>github.com</em></span>
+  </div>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="38" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--branches--parallel-timelines">04 · Branches — parallel timelines</h2>
+<ul>
+<li><strong>Branch</strong> — a parallel timeline</li>
+<li><strong>main stays runnable</strong></li>
+<li><strong>Teams</strong> — own branch each · merge by pull request</li>
+<li><strong>In Desktop</strong> — one dropdown: new · switch · merge · publish</li>
+</ul>
+<p><img src="assets/complex-git.png" alt="" style="width:1110px;" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="39" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="04--more-than-a-backup">04 · More than a backup</h2>
+<ul>
+<li><strong>Public workshop</strong> — a profile beats a CV line</li>
+<li><strong>Open source</strong> — issues · pull requests · reviews</li>
+<li><strong>Coursework &amp; research</strong> — team repos · reproducible code</li>
+<li><strong>Every repo opens on its README</strong> — next section</li>
+</ul>
+<p><img src="assets/contribution.png" alt="" style="width:1110px;" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-class="yellow" data-theme="cpu" lang="C" class="yellow" data-marpit-pagination="40" style="--paginate:true;--class:yellow;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="toolchain">TOOLCHAIN</h2>
+<h3 id="05">05</h3>
+<h4 id="markdown---how-it-all-fits">Markdown - how it all fits</h4>
+<p>Lesson 0 · The toolchain — CPU Tech Group</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="41" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="05--the-scene--a-repo-at-1am">05 · The scene — a repo at 1am</h2>
+<blockquote>
+<p><strong>you open a stranger's repo</strong> — curious, 1am</p>
+</blockquote>
+<ul>
+<li><strong>One file greets you</strong> — README.md</li>
+<li><strong>Plain text</strong> — yet headings · lists · code · links</li>
+<li><strong>No Word</strong> · no toolbar · no formatting painter</li>
+<li><strong>Just characters, doing layout</strong></li>
+</ul>
+<p><em>That language is Markdown — next.</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-marpit-scope-FiunJlUA="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="42" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="05--markdown--write-once-read-anywhere">05 · Markdown — write once, read anywhere</h2>
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre># My project
+## Setup
+- install **Python 3.12**
+- run `python hello.py`
+- see [the docs](https://...)</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <div class="h1">My project</div>
+      <div class="h2">Setup</div>
+      <ul>
+        <li>install <strong>Python 3.12</strong></li>
+        <li>run <code>python hello.py</code></li>
+        <li>see <span class="lnk">the docs</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<ul>
+<li><strong>Plain text, lightly formatted</strong> — readable raw · pretty rendered</li>
+<li><strong>Everywhere</strong> — GitHub · Jupyter · notes apps</li>
+<li><strong>This deck</strong> — Markdown, rendered by Marp</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-marpit-scope-6hJl6xGD="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="43" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="05--syntax-1--headings">05 · Syntax 1 — headings</h2>
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre># Project
+## Setup
+### Step 1
+#### deeper</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <div class="rh1">Project</div>
+      <div class="rh2">Setup</div>
+      <div class="rh3">Step 1</div>
+      <div class="rh3" style="color: #a3a3a3;">…deeper, rarely used</div>
+    </div>
+  </div>
+</div>
+<ul>
+<li><strong><code>#</code> count = level</strong> — one to six</li>
+<li><strong>One <code>#</code> per document</strong> — the title, like a paper</li>
+<li><strong>Space after <code>#</code></strong> — <code>#text</code> is just text</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-marpit-scope-scEy4gFo="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="44" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="05--syntax-2--emphasis">05 · Syntax 2 — emphasis</h2>
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre>**important**
+*gently*
+***both at once***</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <div class="row"><strong>important</strong></div>
+      <div class="row"><em>gently</em></div>
+      <div class="row"><strong><em>both at once</em></strong></div>
+    </div>
+  </div>
+</div>
+<ul>
+<li><strong>Bold</strong> — <code>**word**</code></li>
+<li><strong>Italic</strong> — <code>*word*</code> · underscores <code>_</code> work too</li>
+<li><strong>No bold button</strong> — the characters are the switch</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-marpit-scope-qtWM5mXk="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="45" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="05--syntax-3--lists">05 · Syntax 3 — lists</h2>
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre>- apples
+   - green ones
+- pears
+   1. clone
+   2. commit</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <ul>
+        <li>apples
+          <ul><li>green ones</li></ul>
+        </li>
+        <li>pears</li>
+      </ul>
+      <ol>
+        <li>clone</li>
+        <li>commit</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<ul>
+<li><strong><code>-</code> unordered / <code>1.</code> ordered</strong> — that's the whole difference</li>
+<li><strong>Indent three spaces</strong> — one nesting level</li>
+<li><strong>Numbers renumber themselves</strong> — insert a step, the rest follow</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-marpit-scope-bsx24uf3="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="46" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="05--syntax-4--code">05 · Syntax 4 — code</h2>
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre>run `pip install rich` first
+&nbsp;
+```python
+def hello():
+    print("hi")
+```</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <div class="line">run <code>pip install rich</code> first</div>
+      <div class="codeblock"><span class="kw">def</span> hello():<br />&nbsp;&nbsp;&nbsp;&nbsp;print(<span class="kw">"hi"</span>)</div>
+    </div>
+  </div>
+</div>
+<ul>
+<li><strong>Inline</strong> — one pair of backticks</li>
+<li><strong>Fences</strong> — triple backtick, open and close</li>
+<li><strong>Name the language</strong> — <code>python</code> · <code>c</code> · <code>bash</code> — that's where colour comes from</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-marpit-scope-u9kMxM24="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="47" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="05--syntax-5--links--images">05 · Syntax 5 — links · images</h2>
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre>see [the docs](https://docs.python.org)
+&nbsp;
+![logo](img/logo.png)</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <div class="row">see <span class="lnk">the docs</span></div>
+      <div class="imgdemo">
+        <div class="sq"></div>
+        <div class="cap">logo.png</div>
+      </div>
+    </div>
+  </div>
+</div>
+<ul>
+<li><strong><code>[text](url)</code></strong> — a link</li>
+<li><strong>Add <code>!</code></strong> — the same shape becomes an image</li>
+<li><strong>Alt text matters</strong> — screen readers read it · shown when the image breaks</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-marpit-scope-pYLpCVKW="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="48" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="05--syntax-6--quotes--tables">05 · Syntax 6 — quotes · tables</h2>
+<div class="md-cols">
+  <div class="md-col">
+    <div class="tag">YOU TYPE</div>
+    <pre>&gt; Simplicity is a feature.
+&nbsp;
+| Tool  | Job   |
+| ----- | ----- |
+| VS Code | write |
+| Terminal | run |</pre>
+  </div>
+  <div class="md-col">
+    <div class="tag">READERS SEE</div>
+    <div class="rendered">
+      <blockquote>Simplicity is a feature.</blockquote>
+      <table>
+        <tr><th>Tool</th><th>Job</th></tr>
+        <tr><td>VS Code</td><td>write</td></tr>
+        <tr><td>Terminal</td><td>run</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+<ul>
+<li><strong><code>&gt;</code> quotes a line</strong> — the bar appears for free</li>
+<li><strong><code>|</code> pipes build tables</strong> — <code>---</code> marks the header row</li>
+<li><strong>That's the kit</strong> — you can now read any README, line by line</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-marpit-scope-FnTU4595="" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="49" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="05--the-toolchain-so-far">05 · The toolchain so far</h2>
+<div class="chain">
+  <div class="card">
+    <img src="assets/icons/terminal.png" alt="Terminal" />
+    <div class="verb">RUN</div>
+    <div class="name">Terminal</div>
+    <div class="what">run · install · automate</div>
+  </div>
+  <div class="card">
+    <img src="assets/icons/vscode.png" alt="VS Code" />
+    <div class="verb">WRITE</div>
+    <div class="name">VS Code</div>
+    <div class="what">code · autocomplete · extensions</div>
+  </div>
+  <div class="card">
+    <img src="assets/icons/github-desktop.png" alt="GitHub Desktop" />
+    <div class="verb">VERSION</div>
+    <div class="name">Git + GitHub</div>
+    <div class="what">save points · shared in the cloud</div>
+  </div>
+  <div class="card">
+    <div class="glyph">#</div>
+    <div class="verb">DOCUMENT</div>
+    <div class="name">Markdown</div>
+    <div class="what">READMEs · reports · this deck</div>
+  </div>
+</div>
+<div class="later">
+  <img src="assets/icons/docker.png" alt="Docker" />
+  <div class="txt">LATER THIS SERIES — SSH · DOCKER · CI · AI IN THE TERMINAL</div>
+</div>
+<p><em>One job each — together, a workshop.</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-paginate="true" data-theme="cpu" lang="C" data-marpit-pagination="50" style="--paginate:true;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="where-to-learn-more">Where to learn more</h2>
+<ul>
+<li><strong>code.visualstudio.com/docs</strong> — VS Code docs</li>
+<li><strong>markdownguide.org</strong> — the cheat sheet</li>
+<li><strong>github.com/CompPsyUnion</strong> — our GitHub organization</li>
+<li><strong>csdiy.wiki</strong> — community resources</li>
+</ul>
+<p><em>Stuck? Group chat · any mentor.</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-paginate="true" data-class="yellow" data-theme="cpu" lang="C" class="yellow" data-marpit-pagination="51" style="--paginate:true;--class:yellow;--theme:cpu;" data-marpit-pagination-total="51">
+<h2 id="thank-you">THANK YOU</h2>
+<h3 id="04-1">04</h3>
+<h4 id="now-you-may-build">&gt; Now you may BUILD</h4>
+<p>Lesson 0 · The toolchain — CPU Tech Group · 7 October 2026</p>
+</section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame(()=>{t.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=()=>o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o),l=Symbol();let c;const d="marpitSVGPolyfill:setZoomFactor,",h=Symbol(),g=Symbol();const p=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[v]:[],i={then:e=>(t?(async()=>{if(void 0===c){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise(t=>{i.addEventListener("load",()=>t())});i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),c=e.getImageData(5,5,1,1).data[3]<128}return c})().then(t=>{null==e||e(t?[v]:[])}):null==e||e([]),i)};return Object.assign(e,i)};let m,u;function v(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(d)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(u=i)}}catch(t){console.error(t)}}));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||u||t.currentScale||1;m!==a&&(m=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}}),!1!==n&&Array.from(e.querySelectorAll("iframe"),({contentWindow:t})=>{null==t||t.postMessage(`${d}${n}`,"null"===window.origin?"*":window.origin)})}function w({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[h])return t[h];let e=!0;const i=()=>{e=!1,delete t[h]};Object.defineProperty(t,h,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await p()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}m=1,u=void 0;const b=Symbol(),y=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[l];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,o=t[n].proto();a()&&o!==HTMLElement?i||customElements.define(s,r(o,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach(t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)}))}window[l]=!0})(e),e[b])return e[b];const i=w({target:e}),n=()=>{i(),delete e[b]},o=Object.assign(n,{cleanup:n,update:()=>y(e)});return Object.defineProperty(e,b,{configurable:!0,value:o}),o},f=document.currentScript;y(f?f.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>CPU · Lesson 0 · Session 04 — How do I build things?
+   VS Code + Terminal + Git/GitHub for CS freshmen.
+   Order: the need -&gt; terminal -&gt; VS Code -&gt; Git/GitHub -&gt; Markdown.
+   Every tool section opens with a scene page (quote + keyword beats) before teaching.
+   Slides carry keywords only; the HTML comment on each page is the talk track.</p><p>Cover: title in the yellow band, subtitle, then who and when.</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>Agenda: six stops, first row highlighted.</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p>Section divider.</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>Regular content: five scenarios as a staircase. Enlarged on purpose.
+     讲稿：开学第一周的五个场景，一层层递进——写程序、跑起来、交上去、
+     组队、读别人的代码。都不是天才问题，是工具和习惯问题。</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>Section divider.</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>Regular content: the scene that motivates the terminal.
+     讲稿：周五要交的作业，spec 里一行小字：代码必须能在实验室服务器上跑。
+     你登上去——没有桌面、没有图标，鼠标点哪儿都没反应。
+     只有一个黑窗口和一个闪烁的光标，它在等你敲一行字。
+     讲完这页闪回 1969：这个黑窗口是从哪来的。</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>讲稿（时间线 1/4 · 1969–1978）：
+     1969 年，贝尔实验室。计算机是一整间屋子的 PDP 系列，贵到一整栋楼共用一台。
+     工程师排队用一台像打字机的东西跟它说话——电传打字机 teletype（ASR-33）：
+     你敲一行，机器在纸上敲一行回给你。Unix 就是在这样的机器上写出来的，
+     所以 Unix 的一切从出生起就是&quot;命令&quot;。
+     1977/78 年：Bourne shell（真正读你每一行字的程序）登场；
+     DEC 的 VT100 把纸换成了屏幕——玻璃终端，&quot;黑窗口&quot;的原形，
+     你 Mac 里的 Terminal.app 就是在软件里模拟这台屏幕。</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>讲稿（时间线 2/4 · 1981–1984）：
+     1981 年另一条支线汇进来：IBM PC 出厂直接进 DOS 的 C:\&gt; 提示符，
+     没有桌面没有图标，开机就是命令行（COMMAND.COM 就是那时的 shell）。
+     1984 年 Macintosh 把图形界面带进千家万户，点鼠标赢了大众。</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>讲稿（时间线 3/4 · 1985–2006）：
+     1985 年微软回应：Windows 1.0 只是在 DOS 外面套了一层图形壳——
+     黑窗口从没消失，只是藏到了界面底下，今天 Win+R 输入 cmd 就能叫出它
+     （cmd.exe 就是当年 COMMAND.COM 的后代）。
+     2006 年 PowerShell：不再只会处理文本，还能处理对象，运维工程师的挚爱。</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>讲稿（时间线 4/4 · 2016–今天，收尾）：
+     2016 年 WSL——Windows 里跑真正的 Ubuntu 和 bash；
+     2019 年 Windows Terminal 带来标签页和主题。
+     但注意：图形界面赢了大众，机房依然没有屏幕、凌晨三点的脚本不需要鼠标、
+     SSH 连到千里外的服务器只有文字。
+     所以无论 Mac 还是 Windows，你今天敲的 ls，和 1969 年工程师敲的是同一个词。</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>Regular content: two definitions, then why typing survives.</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>Regular content: the right-click menu, reinterpreted. Keywords only.
+     讲稿：从你们最熟悉的右键菜单说起——新建、复制、重命名、删除，闭着眼都会点。
+     但每个按钮底下，跑的都是一条命令：图形界面 1984 年才来，命令 1969 年就在了。
+     菜单是命令的皮肤。接下来五页，把这份菜单翻译回命令。</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>Regular content: look around. 讲稿：双击打开文件夹看看有什么——ls；
+     双击进去、退出来——cd。两个地址记住：点 = 这里，点点 = 上一级。</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>Regular content: create. Image: the right-click New submenu on the right.
+     讲稿：右键新建文件夹，就是 mkdir；新建文本文档，就是 touch——touch 只做一件事，
+     放一个零字节的空文件。右边就是你们天天点的菜单：New → Folder、Text Document，
+     每个菜单项底下都是一条命令。命令行里&quot;验证&quot;就是再敲一次 ls。</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>Regular content: copy and rename. Image: the ls/cp/mv/rm session.
+     讲稿：复制粘贴就是 cp；重命名就是 mv——mv 同时也是移动：给路径就是搬走，给新名字就是改名。
+     右边实录：cp a.txt b.txt，mv b.txt c.txt。图里最后一行 rm，留给下一页。</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>Regular content: delete. 讲稿：删除就是 rm。回看上一页图：最后 rm c.txt，
+     再 ls，c.txt 消失了。唯一要敬畏的命令：没有回收站，没有撤销。
+     整个文件夹 rm -r project。 freshmen 的第一课：rm 之前先 ls。</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>Regular content: payoff — the five commands composed into one line.</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>Regular content (extension): where terminals will find you this year.</p><p>### Linux workshop: 10.11 (this Sunday) 14:00-17:00 @ IAMET 406</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>Section divider.</p></div><div class="bespoke-marp-note" data-index="19" tabindex="0"><p>Regular content: the scene that motivates a real editor.
+     讲稿：周二晚上 23:40，第一个 Python 作业。
+     记事本里写 hello.py，满屏灰色，括号配不配对全靠自己眼睛；
+     第 40 行一个拼写错误，找了半个小时；
+     有同学用 Word 写代码，引号被自动换成弯引号，Python 当场报错。
+     代码需要的不是打字机，是一个懂代码的工作台。</p></div><div class="bespoke-marp-note" data-index="20" tabindex="0"><p>Regular content: what VS Code is. Icon bottom-right.</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>Regular content: real VS Code screenshot with numbered overlays and a legend.
+     Panel is deliberately legend-only — it is hidden until Ctrl+`.</p></div><div class="bespoke-marp-note" data-index="22" tabindex="0"><p>Regular content: language support in three steps, Python first.</p></div><div class="bespoke-marp-note" data-index="23" tabindex="0"><p>Regular content: a short, opinionated extension list.</p></div><div class="bespoke-marp-note" data-index="24" tabindex="0"><p>Regular content: the two shortcuts that unlock everything else.</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>Regular content (extension): other editors exist; depth beats switching.</p></div><div class="bespoke-marp-note" data-index="26" tabindex="0"><p>Section divider.</p></div><div class="bespoke-marp-note" data-index="27" tabindex="0"><p>Regular content: the Git scene — pure pain, no tools named yet.
+     讲稿：期末论文的文件名进化史，全场都经历过；代码比论文更惨——每天都在改。
+     这页只讲痛，不讲任何工具。问全场：你们怎么办？收答案：
+     复制文件夹、改后缀、U盘、网盘、微信发给自己——下一页开始逐个拆穿。</p></div><div class="bespoke-marp-note" data-index="28" tabindex="0"><p>Regular content: the needs map — one staircase, five needs, no commands.
+     讲稿：把&quot;版本地狱&quot;拆成五个真实需求，一层层递进：想回到昨天、想看清改了什么、
+     电脑坏了也不怕、四个人改一份代码、毕业时能拿出手。
+     接下来每个需求两页：先想笨办法为什么不行，再看那条命令怎么解决。
+     注意节奏：命令永远最后出场。</p></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>Regular content: need one — go back. Naive attempts fail first, command NOT yet.
+     讲稿：需求一：回到昨天。笨办法：整个文件夹复制一份——这就是 essay_v2 的出生方式；
+     U盘——三个版本全过期。你真正想要的东西其实有名字：存档点。
+     游戏玩家 1990 年就有了，程序员 2005 年才等到。这页不出现任何命令。</p></div><div class="bespoke-marp-note" data-index="30" tabindex="0"><p>Regular content: the first command, revealed only now.
+     讲稿：第一条命令：git commit——打一个存档点，必须写一句诚实的话（commit message），
+     比如 &quot;works, before refactor&quot;。git log 列出你打过的所有存档点，时间机器的目录。
+     强调：不要求背命令——GitHub Desktop 上那个蓝色大按钮，底下跑的就是它。</p></div><div class="bespoke-marp-note" data-index="31" tabindex="0"><p>Regular content: need two — what changed. Still no commands.
+     讲稿：需求二：刚才还好好的，现在炸了——到底改了什么？
+     肉眼扫 400 行不现实；Word 用了一辈子也从没告诉过你两版之间差在哪。
+     你想要的是&quot;只给我看不同&quot;。</p></div><div class="bespoke-marp-note" data-index="32" tabindex="0"><p>Regular content: the second pair of commands.
+     讲稿：两条查看命令：git status——哪些文件动了；git diff——具体动了哪几行，红删绿增。
+     GitHub Desktop 左侧的文件清单、右侧的行高亮，就是这两条命令的皮肤。
+     呼应终端篇的习惯：动手之前先看一眼——ls before rm，status before commit。</p></div><div class="bespoke-marp-note" data-index="33" tabindex="0"><p>Regular content: need three — the folder must survive the machine.
+     讲稿：需求三：电脑会坏、会被偷、会忘在图书馆；你还有宿舍台式机和实验室机器。
+     U盘和微信传文件是&quot;版本轮盘赌&quot;。你要的是：这个文件夹在任何机器上都自动是最新的。
+     这页同样不出现命令，悬念留给下一页的&quot;云端副本&quot;。</p></div><div class="bespoke-marp-note" data-index="34" tabindex="0"><p>Regular content: the answer — a cloud copy. The three names arrive only here.
+     讲稿：答案：把存档点放到云端一个永远在线的仓库里——GitHub。
+     三个名字到这页才出现：Git 是工具（在你电脑上）、GitHub 是网站（云端的家）、
+     GitHub Desktop 是方向盘（点按钮不背命令）。push 上传你的存档点，pull 拉下别人的。
+     顺带把需求五解决了：这个云端仓库本身就是你的作品集。</p></div><div class="bespoke-marp-note" data-index="35" tabindex="0"><p>Regular content: the mental model as a diagram — recap of everything just learned.
+     讲稿：把刚学的三条命令装回一张图：工作文件夹 commit 进本地历史（存档点在你电脑上），
+     push 上到 GitHub 云端副本，pull 拉下别人的。四个词就是 Git 的 90%。
+     这页是总结页，不是新知识页——大家应该已经在点头了。</p></div><div class="bespoke-marp-note" data-index="36" tabindex="0"><p>Regular content: GitHub Desktop walkthrough, button by button.
+     讲稿：现在把方向盘交出来：克隆（clone，第一次把云端仓库拉到本地）、
+     在 VS Code 里改（Desktop 自动列出改动 = git status）、写一句诚实的话点
+     Commit to main（= git commit）、Push origin（= git push）。
+     鼠标悬停任何按钮，Desktop 会显示底下对应的那条命令——这就是我们装它的原因。</p></div><div class="bespoke-marp-note" data-index="37" tabindex="0"><p>Regular content (extension): need four — work together. Branches as parallel timelines.
+     讲稿：需求四：四个人一份代码。答案的下半场：分支——每个人的平行时间线，
+     main 永远保持能跑，试完了再合并（pull request）。这是第十周的事，先存档这页。</p></div><div class="bespoke-marp-note" data-index="38" tabindex="0"><p>Regular content (extension): need five — show your work. GitHub beyond a backup.
+     讲稿：需求五：拿出手。你的 GitHub 主页就是一份活的简历：
+     开源协作（issue、pull request、code review）、课程组和科研的可复现代码。
+     每个仓库打开第一眼看到的 README——正好引出下一节 Markdown。</p></div><div class="bespoke-marp-note" data-index="39" tabindex="0"><p>Section divider.</p></div><div class="bespoke-marp-note" data-index="40" tabindex="0"><p>Regular content: the scene that motivates Markdown.
+     讲稿：凌晨一点，你随手点开 GitHub 上一个陌生的仓库。
+     迎接你的是一个文件：README.md。
+     明明是纯文本，却有标题、列表、代码块、链接——
+     没用 Word，没有工具栏，只有字符在排版。
+     这门&quot;用字符排版&quot;的语言就是 Markdown。</p></div><div class="bespoke-marp-note" data-index="41" tabindex="0"><p>Regular content: Markdown overview — source next to its rendered look.
+     讲稿：Markdown 的全部哲学：写的时候是纯文本，读的时候是漂亮排版。
+     左边是你敲的，右边是读者看的。左边这些符号你都认得吗？
+     接下来六页，一个语法一页，全部过一遍。</p></div><div class="bespoke-marp-note" data-index="42" tabindex="0"><p>Regular content: syntax 1 of 6 — headings.
+     讲稿：第一个语法：标题。# 的数量就是级别，一到六级——论文的章、节、小节。
+     一个文档只放一个 #（大标题）；README 里章节几乎都是 ## 和 ###。
+     两个坑：# 后面要空一格，写 #Project 不算标题；标题上一行要空行。</p></div><div class="bespoke-marp-note" data-index="43" tabindex="0"><p>Regular content: syntax 2 of 6 — emphasis.
+     讲稿：第二个语法：强调。**两个星是粗体**，一个星是斜体，三个星都有。
+     没有加粗按钮——字符本身就是开关。写邮件签名、划重点、标警告全靠它。
+     下划线 _word_ 也行，但星号是通用写法。</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>Regular content: syntax 3 of 6 — lists.
+     讲稿：第三个语法：列表。横杠是无序列表，数字加点是有序。
+     缩进三格就嵌套一层。最妙的是有序列表的编号是自动的——
+     中间插一项，后面的数字全部自己改，永远不会出现 1. 2. 4。</p></div><div class="bespoke-marp-note" data-index="45" tabindex="0"><p>Regular content: syntax 4 of 6 — code.
+     讲稿：第四个语法：代码——你们最常用的一页。一对反引号包行内代码；
+     三连反引号开一块代码区，后面写语言名就有语法高亮。
+     README 里的安装命令、报错信息、配置文件全都靠它。
+     这套 PPT 本身就是 Markdown，里面嵌的代码块就是这么写的。</p></div><div class="bespoke-marp-note" data-index="46" tabindex="0"><p>Regular content: syntax 5 of 6 — links and images.
+     讲稿：第五个语法：链接和图片——方括号放文字，圆括号放地址，
+     前面加个感叹号就变成图片。两者形状一模一样，就差一个 !。
+     alt 文字别偷懒：读屏软件靠它，图挂了的时候显示的也是它。</p></div><div class="bespoke-marp-note" data-index="47" tabindex="0"><p>Regular content: syntax 6 of 6 — quotes and tables.
+     讲稿：最后两个语法：引用和表格。&gt; 引一行别人的话，GitHub 会给它画一条竖线；
+     竖线拼表格，第二行的 --- 分隔表头。表格是 GitHub 扩展（GFM），
+     现在到处都支持。到这里，任意一个 README 你都能逐行读懂了。</p></div><div class="bespoke-marp-note" data-index="48" tabindex="0"><p>Regular content: the toolchain map — four tool cards plus what comes later.</p></div><div class="bespoke-marp-note" data-index="49" tabindex="0"><p>Regular content: where to learn more.</p></div><div class="bespoke-marp-note" data-index="50" tabindex="0"><p>Closing.</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.5.0/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),i={},a=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){i[e]=(i[e]||[]).filter(function(e){return e!==t})},l=function(e,t){return(i[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},c=function(e,t){o[e]&&(n&&l("deactivate",a(n,t)),n=o[e],l("activate",a(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:s,on:function(e,t){return(i[e]||(i[e]=[])).push(t),s.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return o.indexOf(n);l("slide",a(o[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){l("destroy",a(n,e)),i={}}};return(t||[]).forEach(function(e){e(u)}),n||c(0),u}}),t),o=e(r);const i=document.body,a=(...e)=>history.replaceState(...e),s="",l="presenter",c="next",d="overview",u=["",l,d,c],f="bespoke-marp-",m=`data-${f}`,g=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const i=e.toString();return`${t}//${n}${r}${i?"?":""}${i}${o}`},p=()=>i.dataset.bespokeView,v=e=>new URLSearchParams(location.search).get(e),h=(e,t={})=>{const n={location,setter:a,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",g(r,n.location))}catch(e){console.error(e)}},w=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},k=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},E=e=>{e.parent.classList.add(`${f}parent`),e.slides.forEach(e=>e.classList.add(`${f}slide`)),e.on("activate",t=>{const n=`${f}active`,r=t.slide,o=r.classList,i=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),i){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${m}fragment`,(i?"":"in")+"active");const a=`${m}current-fragment`;t===r&&n===o?e.setAttribute(a,"current"):e.removeAttribute(a)})}),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",({fragment:i=!0})=>{if(i){if(r(1))return o(t,n+1),!1;const i=t+1;e.fragments[i]&&o(i,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const i=e.fragments[t+1];i&&o(t+1,i.length-1)}}),e.on("prev",({fragment:i=!0})=>{if(r(-1)&&i)return o(t,n-1),!1;const a=t-1;e.fragments[a]&&o(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},L=document,S=()=>!(!L.fullscreenEnabled&&!L.webkitFullscreenEnabled),P=()=>!(!L.fullscreenElement&&!L.webkitFullscreenElement),_=e=>{e.fullscreen=()=>{S()&&(async()=>{P()?(L.exitFullscreen||L.webkitExitFullscreen)?.call(L):((e=L.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!S()||(e.fullscreen(),t.preventDefault())})},O=`${f}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let i;const a=()=>{i&&clearTimeout(i),i=setTimeout(()=>{r.add(O),o()},e),r.contains(O)&&(r.remove(O),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,a);setTimeout(a,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},A=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${m}load`,e?"":"hideable")}})},C=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",i=>{let a=!1;const s=(e,t)=>{e&&(a=a||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==i.deltaX&&s(i.target,"X"),0!==i.deltaY&&s(i.target,"Y"),a)return;i.preventDefault();const l=Math.sqrt(i.deltaX**2+i.deltaY**2);if(void 0!==i.wheelDelta){if(void 0===i.webkitForce&&Math.abs(i.wheelDelta)<40)return;if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<4)return}else if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let u;(i.deltaX>0||i.deltaY>0)&&(u="next"),(i.deltaX<0||i.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},D=(e=`.${f}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${m}osc=${JSON.stringify(e)}]`).forEach(n)};if(S()||n("fullscreen",e=>e.style.display="none"),!w){const e=(e,t)=>{e.disabled=!0,e.title=`${t} is disabled due to restricted localStorage.`};n("presenter",t=>e(t,"Presenter view")),n("overview",t=>e(t,"Overview view"))}return e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n?e.openPresenterView():"overview"===n&&e.toggleOverviewView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),S()&&(e=>{for(const t of["","webkit"])L.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",S()&&P())))}},N=e=>{if(e.syncKey&&"string"==typeof e.syncKey)return!0;throw new Error("The current instance of Bespoke.js is incompatible with Marp bespoke sync plugin.")},B=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},h({},{setter:(e,...t)=>a({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},i=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),i(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&i(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const a=()=>{const{reference:e}=o();void 0===e||e<=1?k(n):i(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),a()}),e.on("destroy",a)}},K=e=>{w&&document.addEventListener("keydown",t=>{("o"!==t.key||t.altKey||t.ctrlKey||t.metaKey)&&"Escape"!==t.key||(t.preventDefault(),e())})};let q=null;const V=({closeOnSelect:e=!0}={})=>t=>{N(t);const n=n=>{const r=(()=>{if(!q||!q.isConnected){q=document.createElement("div"),q.className=`${f}overview`,q.inert=!0;const n=document.createElement("iframe");n.src=(()=>{const n=new URLSearchParams(location.search);return n.set("view","overview"),n.set("sync",t.syncKey),e&&n.set("closeOnSelect","1"),g(n)})(),q.append(n),document.body.append(q)}return q})(),o=n??!r.dataset.open;setTimeout(()=>{if(r.dataset.open=o?"1":"",r.inert=!o,t.skipTransition=o,o){const e=r.querySelector("iframe");try{e?.contentWindow?.focus()}catch{e?.focus()}}else window.focus()},0)};Object.defineProperties(t,{toggleOverviewView:{enumerable:!0,value:n}}),window.addEventListener("message",e=>{e.origin===window.origin&&"closeOverview"===e.data&&n(!1)}),K(n)},j=e=>{const{title:t}=document;document.title="[Overview]"+(t?` - ${t}`:"");const n=!!v("closeOnSelect"),r=()=>{window.parent.postMessage("closeOverview","null"===window.origin?"*":window.origin)};if(e.slides.forEach((t,o)=>{t.tabIndex=0;const i=()=>{e.slide(o,{fragment:-1}),n&&r()};t.addEventListener("click",i),t.addEventListener("keydown",e=>{"Enter"!==e.key&&" "!==e.key||(e.preventDefault(),i())})}),window.addEventListener("keydown",t=>{const n=e.slide(),r=t=>{const r=t=>{const n=e.slides[t].getBoundingClientRect();return[Math.round((n.left+n.right)/2),Math.round((n.top+n.bottom)/2)]};let o=null,i=n;do{const e=r(i);if(o){if(Math.abs(e[0]-o[0])<2)return i}else o=e;i+=t}while(i>=0&&i<e.slides.length);return n};if("ArrowLeft"===t.key)e.slide(Math.max(n-1,0),{fragment:-1});else if("ArrowRight"===t.key)e.slide(Math.min(n+1,e.slides.length-1),{fragment:-1});else if("ArrowUp"===t.key)e.slide(r(-1),{fragment:-1});else if("ArrowDown"===t.key)e.slide(r(1),{fragment:-1});else if("End"===t.key)e.slide(e.slides.length-1,{fragment:-1});else{if("Home"!==t.key)return;e.slide(0,{fragment:-1})}t.preventDefault();const o=e.slide();e.slides[o]?.focus?.(),e.slides[o]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),e.on("slide",({index:t})=>{e.slides[t]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),window.parent!==window){K(r);const e=document.createElement("header");e.className=`${f}overview-header`;const t=document.createElement("button");t.className=`${f}overview-close`,t.type="button",t.title="Close overview",t.textContent=t.title,t.addEventListener("click",r),e.append(t),document.body.prepend(e)}},F=()=>{const e=p();return{[s]:V(),[l]:V({closeOnSelect:!1}),[d]:j}[e]},U=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),i=Number.parseInt(n,10)+1;i>=e.fragments[o].length&&(o+=1,i=0),e.slide(o,{fragment:i})}})};var R,X,H,W,J,Y,z,G={exports:{}},Q=(R||(R=1,G.exports=(X=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],H=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+W[e]+";"})},W={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},J="dangerouslySetInnerHTML",Y={className:"class",htmlFor:"for"},z={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var i in t)!1!==t[i]&&null!=t[i]&&i!==J&&(r+=" "+(Y[i]?Y[i]:H(i))+'="'+H(t[i])+'"');r+=">"}if(-1===X.indexOf(e)){if(t[J])r+=t[J].__html;else for(;n.length;){var a=n.pop();if(a)if(a.pop)for(var s=a.length;s--;)n.push(a[s]);else r+=!0===z[a]?a:H(a)}r+=e?"</"+e+">":""}return z[r]=!0,r})),G.exports),Z=e(Q);const ee=({children:e})=>Z(null,null,...e),te=`${f}presenter-`,ne={container:`${te}container`,dragbar:`${te}dragbar-container`,next:`${te}next`,nextContainer:`${te}next-container`,noteContainer:`${te}note-container`,noteWrapper:`${te}note-wrapper`,noteButtons:`${te}note-buttons`,infoContainer:`${te}info-container`,infoPageArea:`${te}info-page-area`,infoPage:`${te}info-page`,infoPagePrev:`${te}info-page-prev`,infoPageNext:`${te}info-page-next`,noteButtonsBigger:`${te}note-bigger`,noteButtonsSmaller:`${te}note-smaller`,infoTime:`${te}info-time`,infoTimer:`${te}info-timer`},re=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=ne.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",Z(ee,null,Z("div",{class:ne.nextContainer},Z("iframe",{class:ne.next,src:"?view=next"})),Z("div",{class:ne.dragbar}),Z("div",{class:ne.noteContainer},Z("div",{class:ne.noteWrapper}),Z("div",{class:ne.noteButtons},Z("button",{class:ne.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),Z("button",{class:ne.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),Z("div",{class:ne.infoContainer},Z("div",{class:ne.infoPageArea},Z("button",{class:ne.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),Z("button",{class:ne.infoPage}),Z("button",{class:ne.infoPageNext,tabindex:"-1",title:"Next"},"Next")),Z("time",{class:ne.infoTime,title:"Current time"}),Z("time",{class:ne.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(ne.dragbar).addEventListener("mousedown",()=>{t=!0,r(ne.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(ne.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(ne.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(ne.nextContainer).addEventListener("click",()=>e.next());const n=r(ne.next),o=(i=n,(e,t)=>i.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var i;n.addEventListener("load",()=>{r(ne.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const a=document.querySelectorAll(".bespoke-marp-note");a.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(ne.noteWrapper).appendChild(e)}),e.on("activate",()=>a.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const l=e=>{s=Math.max(-5,s+e),r(ne.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},c=()=>l(1),d=()=>l(-1),u=r(ne.noteButtonsBigger),f=r(ne.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),c()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&c(),"-"===e.key&&d()},!0);const m=r(ne.infoPage);e.on("activate",({index:t})=>{m.textContent=`${t+1} / ${e.slides.length}`}),m.addEventListener("click",()=>{m.blur(),e.toggleOverviewView()});const g=r(ne.infoPagePrev),p=r(ne.infoPageNext);g.addEventListener("click",t=>{g.blur(),e.prev({fragment:!t.shiftKey})}),p.addEventListener("click",t=>{p.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{g.disabled=0===t&&0===r,p.disabled=t===e.slides.length-1&&r===n.length-1});let v=new Date;const h=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-v.getTime(),o=t(n/1e3%60),i=t(n/1e3/60%60),a=t(n/36e5%24);r(ne.infoTime).textContent=e.toLocaleTimeString(),r(ne.infoTimer).textContent=`${a}:${i}:${o}`};h(),setInterval(h,250),r(ne.infoTimer).addEventListener("click",()=>{v=new Date})})(e)},oe=e=>{N(e),Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:ie},presenterUrl:{enumerable:!0,get:ae}}),w&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function ie(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,te+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function ae(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),g(e)}const se=e=>{const t=p();return t===c&&e.appendChild(document.createElement("span")),{[s]:oe,[l]:re,[c]:U}[t]},le=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},ce=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},de=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?ce(v("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:i,slides:a}=e,s=o(0,r(t,a.length-1)),l=o(0,r(n||0,i[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(ce(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],i=r.closest("[data-marpit-fragment]");if(t&&i){const e=t.indexOf(i);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||h({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),h({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},{PI:ue,abs:fe,sqrt:me,atan2:ge}=Math,pe={passive:!0},ve=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,i=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?i(e[0]):void 0},pe),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=i(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=me(fe(n)**2+fe(o)**2),r.radian=ge(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+ue)%(2*ue)-ue;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},pe)},he=new Map;he.clear(),he.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const we={both:"",outgoing:"outgoing-",incoming:"incoming-"},ye={forward:"",backward:"-backward"},be=e=>`--marp-bespoke-transition-animation-${e}`,ke=e=>`--marp-transition-${e}`,xe=be("name"),Ee=be("duration"),$e=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const i=getComputedStyle(r).getPropertyValue(ke("duration"));i&&Number.parseFloat(i)>=0&&(n.defaultDuration=i),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),Le=async e=>he.has(e)?he.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(we))for(const[i,a]of Object.entries(ye)){const s=`marp-${o}transition${a}-${e}`;n.push($e(s).then(e=>{t[i]=t[i]||{},t[i][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(he.set(e,t),t)),Se=e=>Object.values(e).flatMap(Object.values).every(e=>!e),Pe=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[xe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[be("direction")]="reverse"),e}})();return!o&&n?Pe(e,{type:t,backward:!1}):o||{[xe]:"__bespoke_marp_transition_no_animation__"}},_e=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},Oe="_tSId",Te="_tA",Ie="bespoke-marp-transition-warming-up",Me=window.matchMedia("(prefers-reduced-motion: reduce)"),Ae="__bespoke_marp_transition_reduced_outgoing__",Ce="__bespoke_marp_transition_reduced_incoming__",De={forward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}},backward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}}},Ne=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ke("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>Le(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=_e(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>i=>{const a=t();if(a)return!!i[Te]||!("object"!=typeof a||(a.skipTransition(),!i.forSync));if(e.skipTransition)return!0;if(!o(i))return!0;const s=e.slides[e.slide()],l=()=>i.back??r,c="data-transition"+(l()?"-back":""),d=s.querySelector(`section[${c}]`);if(!d)return!0;const u=_e(d.getAttribute(c)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await Le(e);if(Se(n)){if(!t)return;return n=await Le(`__builtin__${e}`),Se(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(i)}finally{t(!1)}return}let r=e;Me.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=De);const o=document.getElementById(Oe);o&&o.remove();const a=document.createElement("style");a.id=Oe,document.head.appendChild(a),((e,t)=>{const n=[`:root{${ke("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${Ee}:${o};}`);const i=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${i(Pe(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${i(Pe(e,{...t,type:"incoming"}))}}`),n})(r,{backward:l(),duration:u.duration}).forEach(e=>a.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ie);let c=!1;const d=()=>{c||(n(i),c=!0,s.remove(Ie))},f=()=>{t(!1),a.remove(),s.remove(Ie)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[Te]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[Te]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[Te]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Be;const Ke=()=>(void 0===Be&&(Be="wakeLock"in navigator&&navigator.wakeLock),Be),qe=async()=>{const e=Ke();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ve=async()=>{if(!Ke())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&qe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await qe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=v("view");i.dataset.bespokeView=u.some(t=>t&&t===e)?e:""})();const t=(e=>{const t=v(e);return h({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=u.findIndex(e=>p()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,1,0],B({key:t})],[[1,1,0,1],se(e)],[[1,1,0,0],M],[[1,1,1,1],E],[[1,0,0,0],T()],[[1,1,1,1],A],[[1,1,1,1],de({history:!1})],[[1,1,0,0],C()],[[1,1,1,0],_],[[1,0,0,0],le],[[1,1,0,0],ve()],[[1,0,0,0],D()],[[1,1,1,0],F()],[[1,0,0,0],Ne],[[1,1,1,1],$],[[1,1,1,0],Ve]))})()}();</script></body></html>
