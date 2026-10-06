@@ -1165,11 +1165,10 @@ essay.docx -> essay_v2.docx -> essay_final.docx -> essay_final_REAL.docx
 
 - **Branch** — a parallel timeline
 - **main stays runnable**
-- **Try → merge or delete**
 - **Teams** — own branch each · merge by pull request
 - **In Desktop** — one dropdown: new · switch · merge · publish
 
-*Not week one. Week ten — file this page.*
+![w:1110](assets/complex-git.png)
 
 ---
 
@@ -1184,6 +1183,8 @@ essay.docx -> essay_v2.docx -> essay_final.docx -> essay_final_REAL.docx
 - **Open source** — issues · pull requests · reviews
 - **Coursework & research** — team repos · reproducible code
 - **Every repo opens on its README** — next section
+
+![w:1110](assets/contribution.png)
 
 ---
 
