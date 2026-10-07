@@ -105,12 +105,12 @@ Lesson 0 · The toolchain — CPU Tech Group
 
 <style scoped>
 section {
-  padding-right: 476px;
+  padding-right: 360px;
 }
 .side-shot {
   position: absolute;
   top: 0;
-  right: -100px;
+  right: -160px;
   width: 640px;
   height: 720px;
 }
@@ -125,7 +125,8 @@ section {
 > **"your code must run on the lab server"** — coursework spec, week 1
 
 - **You log in** — no desktop · no icons
-- **One black window** · **The mouse does nothing** · a blinking cursor
+- **One black window** · **The mouse does nothing**
+   - only a blinking cursor
 - **It waits for a line from you**
 
 *Where did this thing come from? 1969.*
@@ -442,12 +443,12 @@ section {
 
 <style scoped>
 section {
-  padding-right: 676px;
+  padding-right: 596px;
 }
 .side-shot {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -70px;
   width: 640px;
   height: 720px;
 }
